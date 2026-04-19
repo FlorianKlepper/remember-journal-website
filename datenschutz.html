@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz – Remember</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral: #E8593C;
+      --coral-dark: #c94a2f;
+      --coral-light: #fdeae5;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--coral);
+      text-decoration: none;
+    }
+    .nav-back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .page-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .intro-note {
+      background: var(--coral-light);
+      border-left: 3px solid var(--coral);
+      padding: 1rem 1.2rem;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.92rem;
+      color: #374151;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .intro-note strong { color: var(--coral); }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    p { font-size: 0.95rem; color: #374151; margin-bottom: 0.6rem; }
+    ul { margin: 0.4rem 0 0.8rem 1.4rem; }
+    ul li { font-size: 0.95rem; color: #374151; margin-bottom: 0.3rem; }
+    a { color: var(--coral); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    .last-updated { font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; }
+
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0.8rem; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Remember</a>
+      <a class="nav-back" href="index.html">← Zurück</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-label">Rechtliches</div>
+    <h1>Datenschutzerklärung</h1>
+    <p class="last-updated">Stand: April 2026</p>
+
+    <div class="intro-note">
+      <strong>Kurzfassung:</strong> Remember sammelt keine persönlichen Daten, zeigt keine Werbung und benötigt keinen Account. Deine Einträge werden ausschließlich lokal auf deinem Gerät gespeichert.
+    </div>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Dr. Florian Klepper<br />
+    E-Mail: <a href="mailto:f.klepper@gmx.de">f.klepper@gmx.de</a></p>
+
+    <hr class="divider" />
+
+    <h2>2. Datenerhebung in der App</h2>
+    <p>Die App „Remember – Life Journal" erhebt <strong>keine personenbezogenen Daten</strong>. Insbesondere:</p>
+    <ul>
+      <li>Es wird kein Benutzerkonto erstellt oder benötigt.</li>
+      <li>Es werden keine Daten an Server des Anbieters übertragen.</li>
+      <li>Es findet kein Tracking oder Profiling statt.</li>
+      <li>Es werden keine Analysetools oder Werbedienste eingesetzt.</li>
+    </ul>
+    <p>Alle Inhalte (Einträge, Fotos, Standorte) werden ausschließlich lokal auf deinem iPhone gespeichert und verlassen das Gerät nicht, es sei denn, du nutzt Apples eigene iCloud-Sicherung.</p>
+
+    <hr class="divider" />
+
+    <h2>3. Standortdaten</h2>
+    <p>Remember kann optional auf deinen Standort zugreifen, um Einträge geografisch zu verorten. Die Standortdaten werden:</p>
+    <ul>
+      <li>nur auf deinem Gerät gespeichert,</li>
+      <li>nicht an Dritte übermittelt,</li>
+      <li>nur genutzt, wenn du die Berechtigung ausdrücklich erteilt hast.</li>
+    </ul>
+    <p>Die Standortberechtigung kann jederzeit in den iOS-Einstellungen widerrufen werden.</p>
+
+    <hr class="divider" />
+
+    <h2>4. Fotozugriff</h2>
+    <p>Wenn du Fotos zu Einträgen hinzufügst, greift die App auf deine Fotobibliothek zu. Die ausgewählten Bilder werden lokal in der App gespeichert und nicht weitergeleitet.</p>
+
+    <hr class="divider" />
+
+    <h2>5. iCloud-Sicherung</h2>
+    <p>Wenn du iCloud-Backup in den iOS-Einstellungen aktiviert hast, können App-Daten von Apple als Teil des Gerätesicherung gespeichert werden. Dies unterliegt den Datenschutzbestimmungen von Apple und wird nicht vom Anbieter dieser App kontrolliert.</p>
+
+    <hr class="divider" />
+
+    <h2>6. Diese Website</h2>
+    <p>Diese Webseite (Landing Page) wird statisch gehostet. Es werden keine Cookies gesetzt, keine Analyse-Tools verwendet und keine personenbezogenen Daten erhoben.</p>
+
+    <hr class="divider" />
+
+    <h2>7. Deine Rechte (DSGVO)</h2>
+    <p>Da wir keine personenbezogenen Daten erheben oder speichern, entfällt die Grundlage für Auskunfts-, Lösch- oder Portabilitätsansprüche gegenüber dem Anbieter. Deine Daten liegen auf deinem Gerät – du hast jederzeit vollständige Kontrolle.</p>
+    <p>Bei Fragen erreichst du uns unter: <a href="mailto:f.klepper@gmx.de">f.klepper@gmx.de</a></p>
+
+    <hr class="divider" />
+
+    <h2>8. Änderungen dieser Erklärung</h2>
+    <p>Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Die aktuelle Version ist stets auf dieser Seite abrufbar.</p>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="mailto:f.klepper@gmx.de">Support</a>
+    </div>
+    <div class="footer-copy">© 2026 Dr. Florian Klepper</div>
+  </footer>
+
+</body>
+</html>

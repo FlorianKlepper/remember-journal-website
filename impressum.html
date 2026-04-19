@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Remember</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral: #E8593C;
+      --coral-dark: #c94a2f;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--coral);
+      text-decoration: none;
+    }
+    .nav-back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .page-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    p { font-size: 0.95rem; color: #374151; margin-bottom: 0.5rem; }
+    a { color: var(--coral); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0.8rem; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Remember</a>
+      <a class="nav-back" href="index.html">← Zurück</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-label">Rechtliches</div>
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>Dr. Florian Klepper</p>
+
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:f.klepper@gmx.de">f.klepper@gmx.de</a></p>
+
+    <hr class="divider" />
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>Dr. Florian Klepper</p>
+
+    <hr class="divider" />
+
+    <h2>App Store</h2>
+    <p>„Remember – Life Journal" wird über den Apple App Store vertrieben.<br />
+    Anbieter des App Stores: Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA.</p>
+
+    <hr class="divider" />
+
+    <h2>Haftungsausschluss</h2>
+    <p>Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Startseite</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="mailto:f.klepper@gmx.de">Support</a>
+    </div>
+    <div class="footer-copy">© 2026 Dr. Florian Klepper</div>
+  </footer>
+
+</body>
+</html>

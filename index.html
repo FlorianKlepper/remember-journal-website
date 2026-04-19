@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remember – Life Journal</title>
+  <meta name="description" content="Halte deine schönsten Erlebnisse fest – mit Karte, Journal und Fotos. Keine Werbung, kein Account." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral: #E8593C;
+      --coral-dark: #c94a2f;
+      --coral-light: #fdeae5;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --section-bg: #fafafa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--coral);
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+    .nav-cta {
+      background: var(--coral);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.45rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--coral-dark); }
+
+    /* HERO */
+    .hero {
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      background: linear-gradient(160deg, #fff 60%, var(--coral-light) 100%);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--coral-light);
+      color: var(--coral);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--coral); }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .btn-appstore {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+    .btn-appstore:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.22); }
+    .btn-appstore svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .btn-appstore-text { display: flex; flex-direction: column; text-align: left; }
+    .btn-appstore-sub { font-size: 0.68rem; font-weight: 400; opacity: 0.8; }
+    .btn-appstore-main { font-size: 1rem; font-weight: 700; line-height: 1.2; }
+    .hero-note { font-size: 0.82rem; color: var(--muted); }
+
+    /* MOCKUP PLACEHOLDER */
+    .mockup-wrap {
+      max-width: 320px;
+      margin: 3rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .mockup {
+      background: linear-gradient(145deg, var(--coral-light), #fff);
+      border: 2px solid var(--border);
+      border-radius: 36px;
+      aspect-ratio: 9/19;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      box-shadow: 0 20px 60px rgba(232,89,60,0.12);
+    }
+    .mockup-icon { font-size: 3.5rem; }
+    .mockup-label { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+
+    /* SECTION WRAPPER */
+    section { padding: 4.5rem 1.5rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
+
+    /* FEATURES */
+    .features-section { background: var(--section-bg); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.8rem 1.6rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--coral-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+
+    /* PRIVACY STRIP */
+    .privacy-section {
+      background: var(--coral);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .privacy-section .section-label { color: rgba(255,255,255,0.7); }
+    .privacy-section .section-title { color: #fff; }
+    .privacy-section .section-sub { color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 2.5rem; }
+    .privacy-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .privacy-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.5rem 1.1rem;
+      border-radius: 30px;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+
+    .pricing-card {
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: var(--coral);
+      box-shadow: 0 0 0 4px var(--coral-light);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--coral);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .pricing-name { font-size: 0.9rem; font-weight: 700; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pricing-price { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.3rem; }
+    .pricing-price span { font-size: 1rem; font-weight: 500; color: var(--muted); }
+    .pricing-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pricing-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .pricing-list li { font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .pricing-list li::before { content: "✓"; color: var(--coral); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+    .pricing-list li.muted { color: var(--muted); }
+    .pricing-list li.muted::before { content: "–"; color: var(--border); }
+
+    /* CTA BOTTOM */
+    .cta-section {
+      background: var(--section-bg);
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+    .cta-section .section-title { margin-bottom: 1rem; }
+    .cta-section .section-sub { margin: 0 auto 2rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.6);
+      padding: 2.5rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 640px) {
+      .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer-logo { color: #fff; font-weight: 700; font-size: 1rem; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">Remember</a>
+      <a class="nav-cta" href="#download">App laden</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">iOS App</div>
+    <h1>Deine Erlebnisse<br /><span>auf der Karte</span></h1>
+    <p>Halte fest, was dein Leben ausmacht – mit Karte, Journal und Fotos. Privat. Ohne Account. Ohne Werbung.</p>
+    <div class="hero-actions" id="download">
+      <a class="btn-appstore" href="#" aria-label="Laden im App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.15-2.22 1.3-2.2 3.88.03 3.08 2.71 4.11 2.74 4.12-.03.07-.43 1.47-1.39 2.62M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="btn-appstore-text">
+          <span class="btn-appstore-sub">Laden im</span>
+          <span class="btn-appstore-main">App Store</span>
+        </div>
+      </a>
+      <span class="hero-note">Kostenlos · iOS 16+</span>
+    </div>
+    <div class="mockup-wrap">
+      <div class="mockup">
+        <div class="mockup-icon">🗺️</div>
+        <div class="mockup-label">Remember – Life Journal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Alles, was dein Journal braucht</h2>
+      <p class="section-sub">Remember kombiniert Karte, Tagebuch und Fotoalbum zu einem eleganten Erlebnis.</p>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Erlebnisse auf der Karte</h3>
+          <p>Sieh auf einen Blick, wo du warst. Alle Einträge erscheinen als Pins auf einer interaktiven Karte.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Persönliches Journal</h3>
+          <p>Schreibe Tagebucheinträge zu jedem Erlebnis – mit Datum, Ort und deinen Gedanken.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📷</div>
+          <h3>Fotos & Erinnerungen</h3>
+          <p>Füge Bilder direkt aus deiner Fotobibliothek hinzu und mach jeden Eintrag lebendig.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Zeitstrahl</h3>
+          <p>Blättere durch deine Erlebnisse in chronologischer Reihenfolge – von heute bis zum ersten Eintrag.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Orte & Standorte</h3>
+          <p>Speichere Orte präzise oder wähle sie manuell auf der Karte. Finde jeden Ort sofort wieder.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Privat & Offline</h3>
+          <p>Deine Daten bleiben auf deinem Gerät. Kein Account, keine Cloud, keine Werbung – niemals.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY STRIP -->
+  <section class="privacy-section">
+    <div class="section-inner">
+      <div class="section-label">Datenschutz</div>
+      <h2 class="section-title">Deine Daten. Dein Gerät.<br />Deine Kontrolle.</h2>
+      <p class="section-sub">Remember sammelt keine persönlichen Daten, verkauft nichts und zeigt keine Werbung. Dein Journal ist wirklich privat.</p>
+      <div class="privacy-pills">
+        <span class="privacy-pill">✓ Kein Account erforderlich</span>
+        <span class="privacy-pill">✓ Keine Werbung</span>
+        <span class="privacy-pill">✓ Keine Cloud-Pflicht</span>
+        <span class="privacy-pill">✓ Kein Tracking</span>
+        <span class="privacy-pill">✓ Offline nutzbar</span>
+        <span class="privacy-pill">✓ Lokale Datenspeicherung</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section>
+    <div class="section-inner">
+      <div class="section-label">Preise</div>
+      <h2 class="section-title">Einfach. Fair. Transparent.</h2>
+      <p class="section-sub">Starte kostenlos und erweitere, wenn du möchtest.</p>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-name">Free</div>
+          <div class="pricing-price">0 <span>€</span></div>
+          <div class="pricing-desc">Für immer kostenlos</div>
+          <ul class="pricing-list">
+            <li>Karte mit Erlebnissen</li>
+            <li>Unbegrenzte Einträge</li>
+            <li>Fotos pro Eintrag</li>
+            <li>Zeitstrahl-Ansicht</li>
+            <li class="muted">Erweiterte Statistiken</li>
+            <li class="muted">Widgets</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Beliebt</div>
+          <div class="pricing-name">Plus</div>
+          <div class="pricing-price">4,99 <span>€ / Monat</span></div>
+          <div class="pricing-desc">Alles, was Remember kann</div>
+          <ul class="pricing-list">
+            <li>Alles aus Free</li>
+            <li>Erweiterte Statistiken</li>
+            <li>Widgets für den Home Screen</li>
+            <li>Export als PDF oder CSV</li>
+            <li>Prioritäts-Support</li>
+            <li>Früher Zugang zu neuen Features</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BOTTOM -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2 class="section-title">Fang heute an zu erinnern.</h2>
+      <p class="section-sub">Kostenlos herunterladen und dein Leben in Einträgen festhalten.</p>
+      <a class="btn-appstore" href="#" style="display:inline-flex;" aria-label="Laden im App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.15-2.22 1.3-2.2 3.88.03 3.08 2.71 4.11 2.74 4.12-.03.07-.43 1.47-1.39 2.62M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="btn-appstore-text">
+          <span class="btn-appstore-sub">Laden im</span>
+          <span class="btn-appstore-main">App Store</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Remember – Life Journal</div>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="mailto:f.klepper@gmx.de">Support</a>
+      </div>
+      <div class="footer-copy">© 2026 Florian Klepper</div>
+    </div>
+  </footer>
+
+</body>
+</html>
