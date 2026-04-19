@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Bash(2)",
+      "Bash(git -C /Users/florianklepper/Documents/remember-website remote set-url origin https://github.com/FlorianKlepper/remember-journal-website.git)",
+      "Bash(git -C /Users/florianklepper/Documents/remember-website push -u origin main)",
+      "Bash(sed -i '' 's/f\\\\.klepper@gmx\\\\.de/support@remember-journal.com/g' index.html impressum.html datenschutz.html)",
+      "Bash(sed -i '' 's/Dr\\\\. Florian Klepper/F. Klepper/g' index.html impressum.html datenschutz.html)",
+      "Bash(sed -i '' 's/Florian Klepper/F. Klepper/g' index.html impressum.html datenschutz.html)",
+      "Bash(git pull *)"
+    ]
+  }
+}
