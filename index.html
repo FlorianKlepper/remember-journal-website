@@ -211,6 +211,87 @@
     .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
     .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
 
+    /* SCREENSHOTS */
+    .screenshots-section { padding: 4.5rem 0; background: #fff; overflow: hidden; }
+    .screenshots-section .section-inner { padding: 0 1.5rem; }
+    .screenshots-section .section-sub { margin-bottom: 2.5rem; }
+
+    .screenshots-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 1rem 1.5rem 2rem;
+    }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+
+    .screenshots-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+    }
+
+    @media (min-width: 900px) {
+      .screenshots-scroll { overflow-x: visible; padding: 1rem 1.5rem 2rem; }
+      .screenshots-track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 1.5rem;
+        justify-items: center;
+      }
+      .screenshot-item { width: 100%; display: flex; justify-content: center; }
+    }
+
+    .screenshot-item {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 220px;
+    }
+    @media (min-width: 900px) { .screenshot-item { width: 100%; max-width: 260px; } }
+
+    .iphone-frame {
+      position: relative;
+      border-radius: 36px;
+      border: 3px solid #1a1a1a;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        inset 0 0 0 2px #2a2a2a,
+        0 24px 48px rgba(0,0,0,0.18),
+        0 8px 16px rgba(0,0,0,0.1);
+      background: #000;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .iphone-frame:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        inset 0 0 0 2px #2a2a2a,
+        0 36px 64px rgba(0,0,0,0.22),
+        0 12px 24px rgba(0,0,0,0.12);
+    }
+    .iphone-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 20px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 10;
+    }
+    .iphone-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9/19.5;
+      object-fit: cover;
+      border-radius: 33px;
+    }
+
     /* PRIVACY STRIP */
     .privacy-section {
       background: var(--coral);
@@ -398,6 +479,61 @@
           <p>Deine Daten bleiben auf deinem Gerät. Kein Account, keine Cloud, keine Werbung – niemals.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="screenshots-section">
+    <div class="section-inner">
+      <div class="section-label">Einblicke</div>
+      <h2 class="section-title">So sieht Remember aus</h2>
+      <p class="section-sub">Schlicht, übersichtlich und schön – auf jedem iPhone.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshots-track">
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-1.png" alt="Remember Screenshot 1" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-2.png" alt="Remember Screenshot 2" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-3.png" alt="Remember Screenshot 3" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-4.png" alt="Remember Screenshot 4" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-5.png" alt="Remember Screenshot 5" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-6.png" alt="Remember Screenshot 6" loading="lazy" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame">
+            <div class="iphone-notch"></div>
+            <img src="images/screenshot-7.png" alt="Remember Screenshot 7" loading="lazy" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
