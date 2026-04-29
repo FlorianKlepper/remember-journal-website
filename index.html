@@ -418,6 +418,38 @@
     .cta-section .section-title { margin-bottom: 1rem; }
     .cta-section .section-sub { margin: 0 auto 2rem; }
 
+    /* BETA */
+    .beta-section {
+      background: var(--section-bg);
+      text-align: center;
+      padding: 4.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .beta-section h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .beta-section p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .btn-beta {
+      display: inline-block;
+      background: var(--coral);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(232,89,60,0.3);
+    }
+    .btn-beta:hover { background: var(--coral-dark); transform: translateY(-2px); }
+
     /* FOOTER */
     footer {
       background: var(--text);
@@ -656,6 +688,18 @@
           <span class="btn-appstore-sub">Laden im</span>
           <span class="btn-appstore-main">App Store</span>
         </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- BETA -->
+  <section class="beta-section">
+    <div class="section-inner">
+      <div class="section-label">Early Access</div>
+      <h2>Beta Tester werden</h2>
+      <p>Teste Remember vor dem offiziellen Launch!</p>
+      <a class="btn-beta" href="mailto:support@remember-journal.com?subject=Remember%20Beta%20Test&body=Ich%20möchte%20Remember%20beta%20testen!">
+        Jetzt mitmachen →
       </a>
     </div>
   </section>
