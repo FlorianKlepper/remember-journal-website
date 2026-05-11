@@ -695,6 +695,91 @@
     </div>
   </footer>
 
+  <!-- PostHog Custom Events -->
+  <script>
+    window.addEventListener('load', () => {
+      if (!window.posthog) return;
+
+      // 1. App Store Klicks
+      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          posthog.capture('app_store_clicked', {
+            source: 'website',
+            page: window.location.pathname,
+            language: localStorage.getItem('lang') || 'de'
+          });
+        });
+      });
+
+      // 2. Beta Tester Klicks
+      document.querySelectorAll('a[href*="mailto:support"]').forEach(link => {
+        link.addEventListener('click', () => {
+          posthog.capture('beta_signup_clicked', {
+            source: 'website',
+            language: localStorage.getItem('lang') || 'de'
+          });
+        });
+      });
+
+      // 3. Vergleichsseite Klicks
+      document.querySelectorAll('a[href*="journaling-apps-vergleich"]').forEach(link => {
+        link.addEventListener('click', () => {
+          posthog.capture('comparison_page_clicked');
+        });
+      });
+
+      // 4. Sprachswitch tracken
+      const originalSetLang = window.setLang;
+      if (originalSetLang) {
+        window.setLang = function(lang) {
+          posthog.capture('language_switched', {
+            from: localStorage.getItem('lang'),
+            to: lang
+          });
+          originalSetLang(lang);
+        };
+      }
+
+      // 5. Scroll Tiefe
+      let maxScroll = 0;
+      let scroll25Sent = false, scroll50Sent = false, scroll75Sent = false, scroll100Sent = false;
+      window.addEventListener('scroll', () => {
+        const scrollPercent = Math.round(
+          (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100
+        );
+        if (scrollPercent > maxScroll) {
+          maxScroll = scrollPercent;
+          if (maxScroll >= 25  && !scroll25Sent)  { posthog.capture('scroll_25');  scroll25Sent  = true; }
+          if (maxScroll >= 50  && !scroll50Sent)  { posthog.capture('scroll_50');  scroll50Sent  = true; }
+          if (maxScroll >= 75  && !scroll75Sent)  { posthog.capture('scroll_75');  scroll75Sent  = true; }
+          if (maxScroll >= 95  && !scroll100Sent) { posthog.capture('scroll_100'); scroll100Sent = true; }
+        }
+      });
+
+      // 6. Verweildauer
+      const startTime = Date.now();
+      let timeSent = { s10: false, s30: false, s60: false, s120: false };
+      setInterval(() => {
+        const seconds = Math.round((Date.now() - startTime) / 1000);
+        if (seconds >= 10  && !timeSent.s10)  { posthog.capture('time_10s');  timeSent.s10  = true; }
+        if (seconds >= 30  && !timeSent.s30)  { posthog.capture('time_30s');  timeSent.s30  = true; }
+        if (seconds >= 60  && !timeSent.s60)  { posthog.capture('time_60s');  timeSent.s60  = true; }
+        if (seconds >= 120 && !timeSent.s120) { posthog.capture('time_120s'); timeSent.s120 = true; }
+      }, 1000);
+
+      // 7. Page View mit Details
+      const params = new URLSearchParams(window.location.search);
+      posthog.capture('page_view_detailed', {
+        language:     localStorage.getItem('lang') || 'de',
+        referrer:     document.referrer || 'direct',
+        page:         window.location.pathname,
+        device:       /Mobile|Android|iPhone/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+        utm_source:   params.get('utm_source')   || 'none',
+        utm_campaign: params.get('utm_campaign') || 'none'
+      });
+    });
+  </script>
+
   <!-- Sprachswitch JS -->
   <script>
     function setLang(lang) {
