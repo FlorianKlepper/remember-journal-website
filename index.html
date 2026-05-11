@@ -13,6 +13,17 @@
     gtag('js', new Date());
     gtag('config', 'G-BPRG8Y8J81');
   </script>
+
+  <!-- Sprache automatisch erkennen -->
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    const isGerman = userLang.startsWith('de');
+    if (!localStorage.getItem('lang')) {
+      localStorage.setItem('lang', isGerman ? 'de' : 'en');
+    }
+    const currentLang = localStorage.getItem('lang');
+  </script>
+
   <meta name="description" content="Halte deine schönsten Erlebnisse fest – mit Karte, Journal und Fotos. Keine Werbung, kein Account." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,6 +67,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
     .nav-logo {
       font-size: 1.05rem;
@@ -64,6 +76,7 @@
       letter-spacing: -0.01em;
       text-decoration: none;
     }
+    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
     .nav-cta {
       background: var(--coral);
       color: #fff;
@@ -75,6 +88,30 @@
       transition: background 0.2s;
     }
     .nav-cta:hover { background: var(--coral-dark); }
+
+    /* LANG SWITCH */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 10px;
+    }
+    .lang-switch button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 2px 4px;
+      border-radius: 10px;
+      transition: color 0.15s;
+      color: var(--muted);
+    }
+    .lang-switch button.active { color: var(--coral); }
+    .lang-switch span { color: var(--border); font-size: 0.75rem; }
 
     /* HERO */
     .hero {
@@ -90,16 +127,9 @@
       gap: 3rem;
     }
     @media (min-width: 780px) {
-      .hero-inner {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-      }
+      .hero-inner { flex-direction: row; align-items: center; gap: 4rem; }
     }
-    .hero-text {
-      flex: 1;
-      text-align: center;
-    }
+    .hero-text { flex: 1; text-align: center; }
     @media (min-width: 780px) { .hero-text { text-align: left; } }
     .hero-badge {
       display: inline-block;
@@ -150,25 +180,15 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.18);
     }
     .btn-appstore:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.22); }
-    .btn-appstore svg { width: 22px; height: 22px; flex-shrink: 0; }
-    .btn-appstore-text { display: flex; flex-direction: column; text-align: left; }
-    .btn-appstore-sub { font-size: 0.68rem; font-weight: 400; opacity: 0.8; }
-    .btn-appstore-main { font-size: 1rem; font-weight: 700; line-height: 1.2; }
     .hero-note { font-size: 0.82rem; color: var(--muted); }
 
     /* HERO PHONE */
-    .hero-phone {
-      flex-shrink: 0;
-      width: 220px;
-    }
+    .hero-phone { flex-shrink: 0; width: 220px; }
     @media (min-width: 780px) { .hero-phone { width: 260px; } }
     .hero-phone .iphone-frame {
       border-radius: 36px;
       border: 3px solid #1a1a1a;
-      box-shadow:
-        inset 0 0 0 2px #2a2a2a,
-        0 28px 56px rgba(0,0,0,0.2),
-        0 8px 20px rgba(232,89,60,0.12);
+      box-shadow: inset 0 0 0 2px #2a2a2a, 0 28px 56px rgba(0,0,0,0.2), 0 8px 20px rgba(232,89,60,0.12);
       background: #000;
       overflow: hidden;
       animation: heroFloat 4s ease-in-out infinite;
@@ -179,11 +199,9 @@
     }
     .hero-phone .iphone-notch {
       position: absolute;
-      top: 10px;
-      left: 50%;
+      top: 10px; left: 50%;
       transform: translateX(-50%);
-      width: 72px;
-      height: 20px;
+      width: 72px; height: 20px;
       background: #000;
       border-radius: 12px;
       z-index: 10;
@@ -231,7 +249,6 @@
     }
     @media (min-width: 600px) { .features-grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr 1fr; } }
-
     .feature-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -241,8 +258,7 @@
     }
     .feature-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
     .feature-icon {
-      width: 48px;
-      height: 48px;
+      width: 48px; height: 48px;
       background: var(--coral-light);
       border-radius: 14px;
       display: flex;
@@ -258,7 +274,6 @@
     .screenshots-section { padding: 4.5rem 0; background: #fff; overflow: hidden; }
     .screenshots-section .section-inner { padding: 0 1.5rem; }
     .screenshots-section .section-sub { margin-bottom: 2.5rem; }
-
     .screenshots-scroll {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -267,13 +282,7 @@
       padding: 1rem 1.5rem 2rem;
     }
     .screenshots-scroll::-webkit-scrollbar { display: none; }
-
-    .screenshots-track {
-      display: flex;
-      gap: 1.25rem;
-      width: max-content;
-    }
-
+    .screenshots-track { display: flex; gap: 1.25rem; width: max-content; }
     @media (min-width: 900px) {
       .screenshots-scroll { overflow-x: visible; padding: 1rem 1.5rem 2rem; }
       .screenshots-track {
@@ -287,42 +296,26 @@
       }
       .screenshot-item { width: 100%; display: flex; justify-content: center; }
     }
-
-    .screenshot-item {
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      width: 220px;
-    }
+    .screenshot-item { scroll-snap-align: start; flex-shrink: 0; width: 220px; }
     @media (min-width: 900px) { .screenshot-item { width: 100%; max-width: 260px; } }
-
     .iphone-frame {
       position: relative;
       border-radius: 36px;
       border: 3px solid #1a1a1a;
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08),
-        inset 0 0 0 2px #2a2a2a,
-        0 24px 48px rgba(0,0,0,0.18),
-        0 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), inset 0 0 0 2px #2a2a2a, 0 24px 48px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.1);
       background: #000;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .iphone-frame:hover {
       transform: translateY(-6px) scale(1.02);
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08),
-        inset 0 0 0 2px #2a2a2a,
-        0 36px 64px rgba(0,0,0,0.22),
-        0 12px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), inset 0 0 0 2px #2a2a2a, 0 36px 64px rgba(0,0,0,0.22), 0 12px 24px rgba(0,0,0,0.12);
     }
     .iphone-notch {
       position: absolute;
-      top: 10px;
-      left: 50%;
+      top: 10px; left: 50%;
       transform: translateX(-50%);
-      width: 72px;
-      height: 20px;
+      width: 72px; height: 20px;
       background: #000;
       border-radius: 12px;
       z-index: 10;
@@ -345,12 +338,7 @@
     .privacy-section .section-label { color: rgba(255,255,255,0.7); }
     .privacy-section .section-title { color: #fff; }
     .privacy-section .section-sub { color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 2.5rem; }
-    .privacy-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-    }
+    .privacy-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
     .privacy-pill {
       display: inline-flex;
       align-items: center;
@@ -373,21 +361,16 @@
       margin: 0 auto;
     }
     @media (min-width: 600px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
-
     .pricing-card {
       border: 2px solid var(--border);
       border-radius: 24px;
       padding: 2rem 1.8rem;
       position: relative;
     }
-    .pricing-card.featured {
-      border-color: var(--coral);
-      box-shadow: 0 0 0 4px var(--coral-light);
-    }
+    .pricing-card.featured { border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-light); }
     .pricing-badge {
       position: absolute;
-      top: -13px;
-      left: 50%;
+      top: -13px; left: 50%;
       transform: translateX(-50%);
       background: var(--coral);
       color: #fff;
@@ -410,11 +393,7 @@
     .pricing-list li.muted::before { content: "–"; color: var(--border); }
 
     /* CTA BOTTOM */
-    .cta-section {
-      background: var(--section-bg);
-      text-align: center;
-      padding: 5rem 1.5rem;
-    }
+    .cta-section { background: var(--section-bg); text-align: center; padding: 5rem 1.5rem; }
     .cta-section .section-title { margin-bottom: 1rem; }
     .cta-section .section-sub { margin: 0 auto 2rem; }
 
@@ -425,17 +404,8 @@
       padding: 4.5rem 1.5rem;
       border-top: 1px solid var(--border);
     }
-    .beta-section h2 {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
-    }
-    .beta-section p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-    }
+    .beta-section h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .beta-section p { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; }
     .btn-beta {
       display: inline-block;
       background: var(--coral);
@@ -451,11 +421,7 @@
     .btn-beta:hover { background: var(--coral-dark); transform: translateY(-2px); }
 
     /* FOOTER */
-    footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.6);
-      padding: 2.5rem 1.5rem;
-    }
+    footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem; }
     .footer-inner {
       max-width: 960px;
       margin: 0 auto;
@@ -481,17 +447,25 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="#">Remember</a>
-      <a class="nav-cta" href="#download">App laden</a>
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button id="btn-de" onclick="setLang('de')">🇩🇪 DE</button>
+          <span>|</span>
+          <button id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
+        </div>
+        <a class="nav-cta" href="#download">
+          <span class="de">App laden</span>
+          <span class="en">Download</span>
+        </a>
+      </div>
     </div>
   </nav>
 
   <!-- Launch Banner -->
   <div style="background: linear-gradient(135deg, #E8593C 0%, #c44a2e 100%); padding: 16px 24px; text-align: center; color: white;">
     <p style="margin: 0; font-size: 16px; font-weight: 600;">
-      🎉 Remember ist jetzt im App Store! —
-      <a href="https://apps.apple.com/app/id6762295068" style="color: white; text-decoration: underline; font-weight: 700;">
-        Jetzt kostenlos downloaden →
-      </a>
+      <span class="de">🎉 Remember ist jetzt im App Store! — <a href="https://apps.apple.com/app/id6762295068" style="color: white; text-decoration: underline; font-weight: 700;">Jetzt kostenlos downloaden →</a></span>
+      <span class="en">🎉 Remember is now on the App Store! — <a href="https://apps.apple.com/app/id6762295068" style="color: white; text-decoration: underline; font-weight: 700;">Download for free →</a></span>
     </p>
   </div>
 
@@ -500,13 +474,22 @@
     <div class="hero-inner">
       <div class="hero-text">
         <div class="hero-badge">iOS App</div>
-        <h1>Deine Erlebnisse<br /><span>auf der Karte</span></h1>
-        <p>Halte fest, was dein Leben ausmacht – mit Karte, Journal und Fotos. Privat. Ohne Account. Ohne Werbung.</p>
+        <h1>
+          <span class="de">Deine Erlebnisse<br /><span>auf der Karte</span></span>
+          <span class="en">Your Experiences<br /><span>on the Map</span></span>
+        </h1>
+        <p>
+          <span class="de">Halte fest, was dein Leben ausmacht – mit Karte, Journal und Fotos. Privat. Ohne Account. Ohne Werbung.</span>
+          <span class="en">Capture what makes your life special – with map, journal and photos. Private. No account. No ads.</span>
+        </p>
         <div class="hero-actions" id="download">
           <a href="https://apps.apple.com/app/id6762295068" target="_blank" style="display: inline-block; margin-top: 24px;">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 54px;">
           </a>
-          <p style="font-size: 14px; opacity: 0.7; margin-top: 12px;">Kostenlos · iPhone · iOS 17+</p>
+          <p style="font-size: 14px; opacity: 0.7; margin-top: 12px;">
+            <span class="de">Kostenlos · iPhone · iOS 17+</span>
+            <span class="en">Free · iPhone · iOS 17+</span>
+          </p>
         </div>
       </div>
       <div class="hero-phone">
@@ -522,44 +505,50 @@
   <section class="features-section">
     <div class="section-inner">
       <div class="section-label">Features</div>
-      <h2 class="section-title">Alles, was dein Journal braucht</h2>
-      <p class="section-sub">Remember kombiniert Karte, Tagebuch und Fotoalbum zu einem eleganten Erlebnis.</p>
+      <h2 class="section-title">
+        <span class="de">Alles, was dein Journal braucht</span>
+        <span class="en">Everything your journal needs</span>
+      </h2>
+      <p class="section-sub">
+        <span class="de">Remember kombiniert Karte, Tagebuch und Fotoalbum zu einem eleganten Erlebnis.</span>
+        <span class="en">Remember combines map, journal and photo album into one elegant experience.</span>
+      </p>
       <div class="features-grid">
 
         <div class="feature-card">
           <div class="feature-icon">🗺️</div>
-          <h3>Erlebnisse auf der Karte</h3>
-          <p>Sieh auf einen Blick, wo du warst. Alle Einträge erscheinen als Pins auf einer interaktiven Karte.</p>
+          <h3><span class="de">Erlebnisse auf der Karte</span><span class="en">Experiences on the Map</span></h3>
+          <p><span class="de">Sieh auf einen Blick, wo du warst. Alle Einträge erscheinen als Pins auf einer interaktiven Karte.</span><span class="en">See at a glance where you've been. All entries appear as pins on an interactive map.</span></p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">📖</div>
-          <h3>Persönliches Journal</h3>
-          <p>Schreibe Tagebucheinträge zu jedem Erlebnis – mit Datum, Ort und deinen Gedanken.</p>
+          <h3><span class="de">Persönliches Journal</span><span class="en">Personal Journal</span></h3>
+          <p><span class="de">Schreibe Tagebucheinträge zu jedem Erlebnis – mit Datum, Ort und deinen Gedanken.</span><span class="en">Write diary entries for each experience – with date, location and your thoughts.</span></p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">📷</div>
-          <h3>Fotos & Erinnerungen</h3>
-          <p>Füge Bilder direkt aus deiner Fotobibliothek hinzu und mach jeden Eintrag lebendig.</p>
+          <h3><span class="de">Fotos & Erinnerungen</span><span class="en">Photos & Memories</span></h3>
+          <p><span class="de">Füge Bilder direkt aus deiner Fotobibliothek hinzu und mach jeden Eintrag lebendig.</span><span class="en">Add photos directly from your photo library and bring every entry to life.</span></p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">📅</div>
-          <h3>Zeitstrahl</h3>
-          <p>Blättere durch deine Erlebnisse in chronologischer Reihenfolge – von heute bis zum ersten Eintrag.</p>
+          <h3><span class="de">Zeitstrahl</span><span class="en">Timeline</span></h3>
+          <p><span class="de">Blättere durch deine Erlebnisse in chronologischer Reihenfolge – von heute bis zum ersten Eintrag.</span><span class="en">Browse your experiences in chronological order – from today back to your first entry.</span></p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">📍</div>
-          <h3>Orte & Standorte</h3>
-          <p>Speichere Orte präzise oder wähle sie manuell auf der Karte. Finde jeden Ort sofort wieder.</p>
+          <h3><span class="de">Orte & Standorte</span><span class="en">Places & Locations</span></h3>
+          <p><span class="de">Speichere Orte präzise oder wähle sie manuell auf der Karte. Finde jeden Ort sofort wieder.</span><span class="en">Save locations precisely or select them manually on the map. Find every place instantly.</span></p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🔒</div>
-          <h3>Privat & Offline</h3>
-          <p>Deine Daten bleiben auf deinem Gerät. Kein Account, keine Cloud, keine Werbung – niemals.</p>
+          <h3><span class="de">Privat & Offline</span><span class="en">Private & Offline</span></h3>
+          <p><span class="de">Deine Daten bleiben auf deinem Gerät. Kein Account, keine Cloud, keine Werbung – niemals.</span><span class="en">Your data stays on your device. No account, no cloud, no ads – ever.</span></p>
         </div>
 
       </div>
@@ -569,54 +558,19 @@
   <!-- SCREENSHOTS -->
   <section class="screenshots-section">
     <div class="section-inner">
-      <div class="section-label">Einblicke</div>
-      <h2 class="section-title">So sieht Remember aus</h2>
-      <p class="section-sub">Schlicht, übersichtlich und schön – auf jedem iPhone.</p>
+      <div class="section-label"><span class="de">Einblicke</span><span class="en">Previews</span></div>
+      <h2 class="section-title"><span class="de">So sieht Remember aus</span><span class="en">What Remember looks like</span></h2>
+      <p class="section-sub"><span class="de">Schlicht, übersichtlich und schön – auf jedem iPhone.</span><span class="en">Clean, clear and beautiful – on every iPhone.</span></p>
     </div>
     <div class="screenshots-scroll">
       <div class="screenshots-track">
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-1.png" alt="Remember Screenshot 1" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-2.png" alt="Remember Screenshot 2" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-3.png" alt="Remember Screenshot 3" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-4.png" alt="Remember Screenshot 4" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-5.png" alt="Remember Screenshot 5" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-6.png" alt="Remember Screenshot 6" loading="lazy" />
-          </div>
-        </div>
-        <div class="screenshot-item">
-          <div class="iphone-frame">
-            <div class="iphone-notch"></div>
-            <img src="images/screenshot-7.png" alt="Remember Screenshot 7" loading="lazy" />
-          </div>
-        </div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-1.png" alt="Remember Screenshot 1" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-2.png" alt="Remember Screenshot 2" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-3.png" alt="Remember Screenshot 3" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-4.png" alt="Remember Screenshot 4" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-5.png" alt="Remember Screenshot 5" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-6.png" alt="Remember Screenshot 6" loading="lazy" /></div></div>
+        <div class="screenshot-item"><div class="iphone-frame"><div class="iphone-notch"></div><img src="images/screenshot-7.png" alt="Remember Screenshot 7" loading="lazy" /></div></div>
       </div>
     </div>
   </section>
@@ -624,16 +578,22 @@
   <!-- PRIVACY STRIP -->
   <section class="privacy-section">
     <div class="section-inner">
-      <div class="section-label">Datenschutz</div>
-      <h2 class="section-title">Deine Daten. Dein Gerät.<br />Deine Kontrolle.</h2>
-      <p class="section-sub">Remember sammelt keine persönlichen Daten, verkauft nichts und zeigt keine Werbung. Dein Journal ist wirklich privat.</p>
+      <div class="section-label"><span class="de">Datenschutz</span><span class="en">Privacy</span></div>
+      <h2 class="section-title">
+        <span class="de">Deine Daten. Dein Gerät.<br />Deine Kontrolle.</span>
+        <span class="en">Your Data. Your Device.<br />Your Control.</span>
+      </h2>
+      <p class="section-sub">
+        <span class="de">Remember sammelt keine persönlichen Daten, verkauft nichts und zeigt keine Werbung. Dein Journal ist wirklich privat.</span>
+        <span class="en">Remember collects no personal data, sells nothing and shows no ads. Your journal is truly private.</span>
+      </p>
       <div class="privacy-pills">
-        <span class="privacy-pill">✓ Kein Account erforderlich</span>
-        <span class="privacy-pill">✓ Keine Werbung</span>
-        <span class="privacy-pill">✓ Keine Cloud-Pflicht</span>
-        <span class="privacy-pill">✓ Kein Tracking</span>
-        <span class="privacy-pill">✓ Offline nutzbar</span>
-        <span class="privacy-pill">✓ Lokale Datenspeicherung</span>
+        <span class="privacy-pill"><span class="de">✓ Kein Account erforderlich</span><span class="en">✓ No account required</span></span>
+        <span class="privacy-pill"><span class="de">✓ Keine Werbung</span><span class="en">✓ No ads</span></span>
+        <span class="privacy-pill"><span class="de">✓ Keine Cloud-Pflicht</span><span class="en">✓ No cloud required</span></span>
+        <span class="privacy-pill"><span class="de">✓ Kein Tracking</span><span class="en">✓ No tracking</span></span>
+        <span class="privacy-pill"><span class="de">✓ Offline nutzbar</span><span class="en">✓ Works offline</span></span>
+        <span class="privacy-pill"><span class="de">✓ Lokale Datenspeicherung</span><span class="en">✓ Local data storage</span></span>
       </div>
     </div>
   </section>
@@ -641,37 +601,43 @@
   <!-- PRICING -->
   <section>
     <div class="section-inner">
-      <div class="section-label">Preise</div>
-      <h2 class="section-title">Einfach. Fair. Transparent.</h2>
-      <p class="section-sub">Starte kostenlos und erweitere, wenn du möchtest.</p>
+      <div class="section-label"><span class="de">Preise</span><span class="en">Pricing</span></div>
+      <h2 class="section-title">
+        <span class="de">Einfach. Fair. Transparent.</span>
+        <span class="en">Simple. Fair. Transparent.</span>
+      </h2>
+      <p class="section-sub">
+        <span class="de">Starte kostenlos und erweitere, wenn du möchtest.</span>
+        <span class="en">Start for free and upgrade when you're ready.</span>
+      </p>
       <div class="pricing-grid">
 
         <div class="pricing-card">
           <div class="pricing-name">Free</div>
           <div class="pricing-price">0 <span>€</span></div>
-          <div class="pricing-desc">Für immer kostenlos</div>
+          <div class="pricing-desc"><span class="de">Für immer kostenlos</span><span class="en">Free forever</span></div>
           <ul class="pricing-list">
-            <li>Karte mit Erlebnissen</li>
-            <li>Unbegrenzte Einträge</li>
-            <li>Fotos pro Eintrag</li>
-            <li>Zeitstrahl-Ansicht</li>
-            <li class="muted">Erweiterte Statistiken</li>
+            <li><span class="de">Karte mit Erlebnissen</span><span class="en">Map with experiences</span></li>
+            <li><span class="de">Unbegrenzte Einträge</span><span class="en">Unlimited entries</span></li>
+            <li><span class="de">Fotos pro Eintrag</span><span class="en">Photos per entry</span></li>
+            <li><span class="de">Zeitstrahl-Ansicht</span><span class="en">Timeline view</span></li>
+            <li class="muted"><span class="de">Erweiterte Statistiken</span><span class="en">Advanced statistics</span></li>
             <li class="muted">Widgets</li>
           </ul>
         </div>
 
         <div class="pricing-card featured">
-          <div class="pricing-badge">Beliebt</div>
+          <div class="pricing-badge"><span class="de">Beliebt</span><span class="en">Popular</span></div>
           <div class="pricing-name">Plus</div>
-          <div class="pricing-price">4,99 <span>€ / Monat</span></div>
-          <div class="pricing-desc">Alles, was Remember kann</div>
+          <div class="pricing-price">4,99 <span>€ / <span class="de">Monat</span><span class="en">month</span></span></div>
+          <div class="pricing-desc"><span class="de">Alles, was Remember kann</span><span class="en">Everything Remember can do</span></div>
           <ul class="pricing-list">
-            <li>Alles aus Free</li>
-            <li>Erweiterte Statistiken</li>
-            <li>Widgets für den Home Screen</li>
-            <li>Export als PDF oder CSV</li>
-            <li>Prioritäts-Support</li>
-            <li>Früher Zugang zu neuen Features</li>
+            <li><span class="de">Alles aus Free</span><span class="en">Everything in Free</span></li>
+            <li><span class="de">Erweiterte Statistiken</span><span class="en">Advanced statistics</span></li>
+            <li><span class="de">Widgets für den Home Screen</span><span class="en">Home Screen widgets</span></li>
+            <li><span class="de">Export als PDF oder CSV</span><span class="en">Export as PDF or CSV</span></li>
+            <li><span class="de">Prioritäts-Support</span><span class="en">Priority support</span></li>
+            <li><span class="de">Früher Zugang zu neuen Features</span><span class="en">Early access to new features</span></li>
           </ul>
         </div>
 
@@ -682,16 +648,16 @@
   <!-- CTA BOTTOM -->
   <section class="cta-section">
     <div class="section-inner">
-      <h2 class="section-title">Fang heute an zu erinnern.</h2>
-      <p class="section-sub">Kostenlos herunterladen und dein Leben in Einträgen festhalten.</p>
-      <a class="btn-appstore" href="#" style="display:inline-flex;" aria-label="Laden im App Store">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.15-2.22 1.3-2.2 3.88.03 3.08 2.71 4.11 2.74 4.12-.03.07-.43 1.47-1.39 2.62M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-        <div class="btn-appstore-text">
-          <span class="btn-appstore-sub">Laden im</span>
-          <span class="btn-appstore-main">App Store</span>
-        </div>
+      <h2 class="section-title">
+        <span class="de">Fang heute an zu erinnern.</span>
+        <span class="en">Start remembering today.</span>
+      </h2>
+      <p class="section-sub">
+        <span class="de">Kostenlos herunterladen und dein Leben in Einträgen festhalten.</span>
+        <span class="en">Download for free and capture your life in entries.</span>
+      </p>
+      <a href="https://apps.apple.com/app/id6762295068" target="_blank" style="display: inline-block;">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 54px;">
       </a>
     </div>
   </section>
@@ -700,10 +666,17 @@
   <section class="beta-section">
     <div class="section-inner">
       <div class="section-label">Early Access</div>
-      <h2>Beta Tester werden</h2>
-      <p>Teste Remember vor dem offiziellen Launch!</p>
+      <h2>
+        <span class="de">Beta Tester werden</span>
+        <span class="en">Become a Beta Tester</span>
+      </h2>
+      <p>
+        <span class="de">Teste Remember vor dem offiziellen Launch!</span>
+        <span class="en">Test Remember before the official launch!</span>
+      </p>
       <a class="btn-beta" href="mailto:support@remember-journal.com?subject=Remember%20Beta%20Test&body=Ich%20möchte%20Remember%20beta%20testen!">
-        Jetzt mitmachen →
+        <span class="de">Jetzt mitmachen →</span>
+        <span class="en">Join now →</span>
       </a>
     </div>
   </section>
@@ -714,13 +687,39 @@
       <div class="footer-logo">Remember – Life Journal</div>
       <div class="footer-links">
         <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="datenschutz.html"><span class="de">Datenschutz</span><span class="en">Privacy Policy</span></a>
         <a href="mailto:support@remember-journal.com">Support</a>
-        <a href="journaling-apps-vergleich.html">Journaling Apps Vergleich →</a>
+        <a href="journaling-apps-vergleich.html"><span class="de">App Vergleich →</span><span class="en">App Comparison →</span></a>
       </div>
       <div class="footer-copy">© 2026 F. Klepper · <a href="mailto:support@remember-journal.com" style="color:rgba(255,255,255,0.5);">support@remember-journal.com</a></div>
     </div>
   </footer>
+
+  <!-- Sprachswitch JS -->
+  <script>
+    function setLang(lang) {
+      localStorage.setItem('lang', lang);
+      applyLang(lang);
+    }
+
+    function applyLang(lang) {
+      document.querySelectorAll('.de').forEach(el => {
+        el.style.display = lang === 'de' ? '' : 'none';
+      });
+      document.querySelectorAll('.en').forEach(el => {
+        el.style.display = lang === 'en' ? '' : 'none';
+      });
+      const btnDe = document.getElementById('btn-de');
+      const btnEn = document.getElementById('btn-en');
+      if (btnDe) { btnDe.classList.toggle('active', lang === 'de'); }
+      if (btnEn) { btnEn.classList.toggle('active', lang === 'en'); }
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLang(localStorage.getItem('lang') || 'de');
+    });
+  </script>
 
 </body>
 </html>
