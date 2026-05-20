@@ -18,6 +18,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://remember-journal.com/day-one-alternative</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/day-one-alternative"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/tagebuch-app-ohne-abo"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/tagebuch-app-ohne-abo</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/tagebuch-app-ohne-abo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/day-one-alternative"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://remember-journal.com/impressum.html</loc>
     <priority>0.3</priority>
   </url>
