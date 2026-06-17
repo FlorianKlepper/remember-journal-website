@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Remember Your Life — Journal, Places, Activities | Indie iOS App</title>
-  <meta name="description" content="Map every moment with Remember. Journal, track places, and log activities. Indie iOS app from the Bavarian Alps. No subscription.">
+  <title>Remember Your Life — Memory, Reflection & the Art of Journaling</title>
+  <meta name="description" content="A space dedicated to memory, reflection, and the art of remembering. Explore journaling, place memory, and life logging — plus a quiet iOS app built for exactly this.">
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -16,14 +16,14 @@
   <link rel="alternate" hreflang="x-default" href="https://remember-journal.com/" />
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Remember Your Life — Journal, Places, Activities | Indie iOS App">
-  <meta property="og:description" content="Map every moment with Remember. Journal, track places, and log activities. Indie iOS app from the Bavarian Alps. No subscription.">
+  <meta property="og:title" content="Remember Your Life — Memory, Reflection & the Art of Journaling">
+  <meta property="og:description" content="A space dedicated to memory, reflection, and the art of remembering. Journaling, place memory, life logging — from the Bavarian Alps.">
   <meta property="og:url" content="https://remember-journal.com/">
   <meta property="og:image" content="https://remember-journal.com/images/screenshot-1.png">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Remember Your Life — Journal, Places, Activities">
-  <meta name="twitter:description" content="Map every moment. Journal, track places, log activities. No subscription. iOS app from the Bavarian Alps.">
+  <meta name="twitter:title" content="Remember Your Life — Memory, Reflection & Journaling">
+  <meta name="twitter:description" content="A space dedicated to memory, reflection, and the art of remembering. From the Bavarian Alps.">
   <meta name="twitter:image" content="https://remember-journal.com/images/screenshot-1.png">
 
   <script type="application/ld+json">
@@ -40,7 +40,7 @@
       "address": { "@type": "PostalAddress", "addressRegion": "Bavaria", "addressCountry": "DE" }
     },
     "contactPoint": { "@type": "ContactPoint", "email": "support@remember-journal.com", "contactType": "customer support" },
-    "description": "Indie iOS app for journaling, place tracking, and activity logging. No subscription. Built in the Bavarian Alps."
+    "description": "A knowledge hub for memory, reflection, journaling, and life logging — with a companion iOS app. Built quietly in the Bavarian Alps."
   }
   </script>
 
@@ -50,7 +50,7 @@
     "@type": "WebSite",
     "name": "Remember Your Life",
     "url": "https://remember-journal.com",
-    "description": "Map every moment with Remember. Journal, track places, and log activities. Indie iOS app from the Bavarian Alps.",
+    "description": "A space dedicated to memory, reflection, and the art of remembering.",
     "inLanguage": ["en", "de"],
     "publisher": { "@type": "Organization", "name": "Remember Your Life" }
   }
@@ -84,6 +84,7 @@
       --green: #059669;
       --green-light: #ecfdf5;
       --text: #1f2937;
+      --text-light: #374151;
       --muted: #6b7280;
       --border: #e5e7eb;
       --bg: #ffffff;
@@ -94,15 +95,15 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
       color: var(--text); background: var(--bg);
-      line-height: 1.65; -webkit-font-smoothing: antialiased;
+      font-size: 17px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* NAV */
     nav {
       position: sticky; top: 0; z-index: 200;
       background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
@@ -111,353 +112,283 @@
       display: flex; align-items: center; gap: 1.5rem;
     }
     .nav-logo {
-      font-size: 1.1rem; font-weight: 800;
-      color: var(--blue); text-decoration: none;
-      white-space: nowrap; letter-spacing: -0.02em; flex-shrink: 0;
+      font-size: 1.05rem; font-weight: 800; color: var(--blue);
+      text-decoration: none; white-space: nowrap;
+      letter-spacing: -0.02em; flex-shrink: 0;
     }
     .nav-logo span { color: var(--orange); }
     .nav-links { display: none; list-style: none; gap: 0.1rem; flex: 1; }
     @media (min-width: 768px) { .nav-links { display: flex; } }
     .nav-links a {
       display: block; padding: 0.45rem 0.75rem;
-      font-size: 0.9rem; font-weight: 500;
-      color: var(--text); text-decoration: none;
-      border-radius: 8px; transition: background 0.15s, color 0.15s;
+      font-size: 0.88rem; font-weight: 500; color: var(--text);
+      text-decoration: none; border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
     }
     .nav-links a:hover { background: var(--blue-light); color: var(--blue); }
     .nav-right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; flex-shrink: 0; }
-    .nav-lang {
-      font-size: 0.82rem; color: var(--muted);
-      text-decoration: none; padding: 0.3rem 0.5rem;
-      border-radius: 6px; transition: color 0.15s;
-    }
+    .nav-lang { font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.3rem 0.5rem; border-radius: 6px; transition: color 0.15s; }
     .nav-lang:hover { color: var(--blue); }
     .nav-lang.active { color: var(--blue); font-weight: 600; }
     .nav-cta {
-      background: var(--orange); color: #fff;
-      text-decoration: none; padding: 0.5rem 1rem;
-      border-radius: 22px; font-size: 0.83rem; font-weight: 700;
-      transition: background 0.2s; white-space: nowrap;
+      background: transparent; color: var(--muted);
+      text-decoration: none; padding: 0.45rem 0.9rem;
+      border-radius: 22px; font-size: 0.8rem; font-weight: 600;
+      border: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s; white-space: nowrap;
       min-height: 44px; display: flex; align-items: center;
     }
-    .nav-cta:hover { background: var(--orange-dark); }
+    .nav-cta:hover { color: var(--text); border-color: var(--text); }
     .nav-hamburger {
       display: flex; flex-direction: column; justify-content: center;
-      align-items: center; gap: 5px;
-      background: none; border: none; cursor: pointer;
-      padding: 0.5rem; border-radius: 8px;
+      align-items: center; gap: 5px; background: none; border: none;
+      cursor: pointer; padding: 0.5rem; border-radius: 8px;
       min-width: 44px; min-height: 44px;
     }
     @media (min-width: 768px) { .nav-hamburger { display: none; } }
-    .nav-hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--text); border-radius: 2px;
-      transition: transform 0.25s, opacity 0.25s;
-    }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-mobile {
-      display: none; padding: 1rem 1.5rem 1.5rem;
-      border-top: 1px solid var(--border); background: #fff;
-    }
+    .nav-mobile { display: none; padding: 1rem 1.5rem 1.5rem; border-top: 1px solid var(--border); background: #fff; }
     .nav-mobile.open { display: block; }
-    .nav-mobile a {
-      display: block; padding: 0.8rem 0;
-      font-size: 1rem; font-weight: 500;
-      color: var(--text); text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
+    .nav-mobile a { display: block; padding: 0.8rem 0; font-size: 1rem; font-weight: 500; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
     .nav-mobile a:last-child { border-bottom: none; }
     .nav-mobile a:hover { color: var(--blue); }
 
-    /* HERO */
+    /* HERO — editorial, centered, no image */
     .hero {
-      padding: 5rem 1.5rem 4rem;
-      background: linear-gradient(155deg, var(--blue-light) 0%, #fff 50%, #fff8f3 100%);
+      padding: 6rem 1.5rem 5rem;
+      background: #fff;
       text-align: center;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-inner { max-width: 780px; margin: 0 auto; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--blue-mid); color: var(--blue);
-      font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 0.35rem 1rem; border-radius: 20px; margin-bottom: 1.5rem;
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 1.75rem;
     }
     .hero h1 {
-      font-size: clamp(2.6rem, 8vw, 4.8rem);
+      font-size: clamp(2.8rem, 8vw, 5rem);
       font-weight: 900; line-height: 1.0;
-      letter-spacing: -0.045em; margin-bottom: 1.1rem; color: var(--text);
+      letter-spacing: -0.045em; margin-bottom: 1.5rem; color: var(--text);
     }
     .hero h1 em { color: var(--blue); font-style: normal; }
-    .hero-tagline {
-      font-size: clamp(1.05rem, 3vw, 1.35rem);
-      font-weight: 600; color: var(--muted);
-      margin-bottom: 1.1rem; line-height: 1.4;
+    .hero-intro {
+      font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+      color: var(--text-light); max-width: 560px;
+      margin: 0 auto 1.25rem; line-height: 1.8;
     }
-    .hero-subtitle {
-      font-size: clamp(0.95rem, 2vw, 1.06rem);
-      color: var(--muted); max-width: 500px;
-      margin: 0 auto 2.5rem; line-height: 1.75;
+    .hero-personal {
+      font-size: 1rem; color: var(--muted);
+      max-width: 500px; margin: 0 auto 2.5rem;
+      line-height: 1.8; font-style: italic;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .hero-actions {
+      display: flex; flex-wrap: wrap;
+      gap: 1rem; justify-content: center; align-items: center;
+    }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--orange); color: #fff;
-      text-decoration: none; padding: 0.95rem 2rem;
-      border-radius: 14px; font-size: 1rem; font-weight: 700;
+      background: var(--blue); color: #fff;
+      text-decoration: none; padding: 0.85rem 1.9rem;
+      border-radius: 12px; font-size: 0.95rem; font-weight: 700;
       transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 16px rgba(249,115,22,0.35); min-height: 52px;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.25); min-height: 48px;
     }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: #fff; color: var(--blue);
-      text-decoration: none; padding: 0.95rem 2rem;
-      border-radius: 14px; font-size: 1rem; font-weight: 600;
-      border: 2px solid var(--blue);
-      transition: background 0.2s, transform 0.15s; min-height: 52px;
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn-app-link {
+      font-size: 0.88rem; color: var(--muted);
+      text-decoration: none; padding: 0.5rem 0.25rem;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s;
     }
-    .btn-secondary:hover { background: var(--blue-light); transform: translateY(-2px); }
-    .hero-visual {
-      margin: 3.5rem auto 0; max-width: 700px;
-      border-radius: 20px; overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.09), 0 8px 24px rgba(37,99,235,0.07);
-      background: var(--blue-light);
-      aspect-ratio: 16/9;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .hero-visual-ph {
-      text-align: center; padding: 2rem; color: var(--blue); opacity: 0.45;
-    }
-    .hero-visual-ph .ph-icon { font-size: 3rem; display: block; margin-bottom: 0.75rem; }
-    .hero-visual-ph p { font-size: 0.85rem; line-height: 1.6; }
-    .hero-trust { margin-top: 2rem; font-size: 0.87rem; color: var(--muted); }
+    .btn-app-link:hover { color: var(--text); border-color: var(--text); }
 
-    /* SHARED */
+    /* SHARED SECTION */
     section { padding: 5rem 1.5rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-inner.narrow { max-width: 760px; }
     .section-label {
-      font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 0.6rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem;
     }
     h2.section-title {
-      font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
       font-weight: 800; letter-spacing: -0.03em;
-      line-height: 1.15; margin-bottom: 0.8rem; color: var(--text);
+      line-height: 1.15; margin-bottom: 1rem; color: var(--text);
     }
-    h2.section-title em { color: var(--orange); font-style: normal; }
+    h2.section-title em { color: var(--blue); font-style: normal; }
     .section-sub {
-      font-size: 1.05rem; color: var(--muted);
-      max-width: 560px; margin-bottom: 3rem; line-height: 1.7;
+      font-size: 1.05rem; color: var(--text-light);
+      max-width: 620px; margin-bottom: 3rem; line-height: 1.8;
     }
 
-    /* SUB-BRAND CARDS */
-    .sub-brands-section { background: var(--section-bg); }
-    .cards-grid {
-      display: grid; grid-template-columns: 1fr; gap: 1.5rem;
-    }
-    @media (min-width: 640px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 960px) { .cards-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    .brand-card {
+    /* TOPIC CARDS — editorial, no feature pills */
+    .topics-section { background: var(--section-bg); }
+    .topics-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 640px) { .topics-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .topics-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .topic-card {
       background: #fff; border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem 1.8rem;
+      border-radius: 20px; padding: 2.2rem 2rem;
       display: flex; flex-direction: column;
       transition: box-shadow 0.2s, transform 0.2s;
       position: relative; overflow: hidden;
     }
-    .brand-card::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
+    .topic-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: var(--blue);
     }
-    .brand-card.card-places::before { background: var(--orange); }
-    .brand-card.card-activities::before { background: var(--green); }
-    .brand-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.08); transform: translateY(-3px); }
-    .card-icon {
-      width: 56px; height: 56px;
-      background: var(--blue-light); border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; margin-bottom: 1.25rem; flex-shrink: 0;
-    }
-    .card-places .card-icon { background: #fff7ed; }
-    .card-activities .card-icon { background: var(--green-light); }
-    .brand-card h3 {
-      font-size: 1.2rem; font-weight: 800;
-      margin-bottom: 0.6rem; letter-spacing: -0.02em;
-    }
-    .brand-card p { font-size: 0.93rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.25rem; flex: 1; }
-    .card-features {
-      list-style: none; display: flex;
-      flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;
-    }
-    .card-features li {
-      font-size: 0.78rem; font-weight: 600;
-      color: var(--blue); background: var(--blue-light);
-      padding: 0.25rem 0.65rem; border-radius: 20px;
-    }
-    .card-places .card-features li { color: var(--orange); background: #fff7ed; }
-    .card-activities .card-features li { color: var(--green); background: var(--green-light); }
-    .card-link {
+    .topic-card.card-places::before { background: var(--orange); }
+    .topic-card.card-activities::before { background: var(--green); }
+    .topic-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.07); transform: translateY(-3px); }
+    .topic-icon { font-size: 2rem; margin-bottom: 1.25rem; display: block; }
+    .topic-card h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+    .topic-card p { font-size: 0.97rem; color: var(--text-light); line-height: 1.75; flex: 1; margin-bottom: 1.75rem; }
+    .topic-link {
       display: inline-flex; align-items: center; gap: 0.3rem;
-      font-size: 0.92rem; font-weight: 700; color: var(--blue);
+      font-size: 0.9rem; font-weight: 700; color: var(--blue);
       text-decoration: none; transition: gap 0.15s;
     }
-    .card-places .card-link { color: var(--orange); }
-    .card-activities .card-link { color: var(--green); }
-    .card-link:hover { gap: 0.55rem; }
+    .topic-card.card-places .topic-link { color: var(--orange); }
+    .topic-card.card-activities .topic-link { color: var(--green); }
+    .topic-link:hover { gap: 0.55rem; }
 
-    /* APP SECTION */
-    .app-section { background: #fff; }
-    .app-inner {
-      display: flex; flex-direction: column;
-      gap: 3rem; align-items: center;
+    /* WHY MEMORY — personal prose section */
+    .why-section { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .why-inner { max-width: 680px; margin: 0 auto; }
+    .why-inner p {
+      font-size: 1.1rem; color: var(--text-light);
+      line-height: 1.9; margin-bottom: 1.4rem;
     }
-    @media (min-width: 860px) {
-      .app-inner { flex-direction: row; gap: 5rem; align-items: center; }
-    }
-    .app-text { flex: 1; }
-    .app-text .section-sub { margin-bottom: 2rem; }
-    .app-pricing {
-      background: var(--blue-light); border: 1px solid var(--blue-mid);
-      border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 2rem;
-    }
-    .price-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.4rem; }
-    .price-row:last-child { margin-bottom: 0; }
-    .price-label { color: var(--muted); font-size: 0.88rem; min-width: 55px; }
-    .price-value { font-weight: 700; font-size: 0.95rem; }
-    .price-badge {
-      background: var(--orange); color: #fff;
-      font-size: 0.7rem; font-weight: 700;
-      padding: 0.15rem 0.5rem; border-radius: 20px;
-      text-transform: uppercase; letter-spacing: 0.04em;
-    }
-    .app-store-btn {
-      display: inline-flex; align-items: center; gap: 0.75rem;
-      background: #000; color: #fff; text-decoration: none;
-      padding: 0.85rem 1.5rem; border-radius: 14px;
-      font-size: 0.88rem; font-weight: 600;
-      transition: background 0.2s, transform 0.15s; min-height: 52px;
-    }
-    .app-store-btn:hover { background: #222; transform: translateY(-2px); }
-    .app-store-icon { font-size: 1.5rem; line-height: 1; }
-    .app-store-text { display: flex; flex-direction: column; line-height: 1.2; }
-    .app-store-text small { font-size: 0.7rem; opacity: 0.7; font-weight: 400; }
-    .app-visual { flex-shrink: 0; width: 240px; }
-    @media (min-width: 860px) { .app-visual { width: 280px; } }
-    .iphone-frame {
-      position: relative; border-radius: 38px;
-      border: 3px solid #1a1a1a;
-      box-shadow: inset 0 0 0 2px #2a2a2a,
-                  0 28px 56px rgba(0,0,0,0.18),
-                  0 8px 24px rgba(37,99,235,0.1);
-      background: #000; overflow: hidden;
-    }
-    .iphone-notch {
-      position: absolute; top: 10px; left: 50%;
-      transform: translateX(-50%);
-      width: 68px; height: 18px;
-      background: #000; border-radius: 10px; z-index: 10;
-    }
-    .iphone-frame img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 35px; }
+    .why-inner p:last-child { margin-bottom: 0; }
+    .why-inner p strong { color: var(--text); font-weight: 700; }
 
-    /* KNOWLEDGE HUB */
-    .hub-section { background: var(--section-bg); }
-    .articles-grid {
-      display: grid; grid-template-columns: 1fr;
-      gap: 1.25rem; margin-bottom: 2.5rem;
+    /* SCIENCE TEASER */
+    .science-section { background: var(--section-bg); }
+    .science-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 640px) { .science-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .science-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .science-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.75rem 1.6rem;
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
+    .science-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .science-tag {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .science-card h3 { font-size: 1rem; font-weight: 700; line-height: 1.4; color: var(--text); }
+    .science-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; flex: 1; }
+    .science-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); display: inline-flex; align-items: center; gap: 0.25rem; }
+
+    /* ARTICLE CARDS */
+    .hub-section { background: #fff; }
+    .articles-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 2.5rem; }
     @media (min-width: 640px) { .articles-grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 900px) { .articles-grid { grid-template-columns: 1fr 1fr 1fr; } }
     .article-card {
-      background: #fff; border: 1px solid var(--border);
+      background: var(--section-bg); border: 1px solid var(--border);
       border-radius: 16px; padding: 1.6rem;
       text-decoration: none; color: inherit;
-      display: flex; flex-direction: column; gap: 0.7rem;
+      display: flex; flex-direction: column; gap: 0.65rem;
       transition: box-shadow 0.2s, transform 0.2s;
     }
-    .article-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
-    .article-hub {
-      font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.07em; text-transform: uppercase; color: var(--blue);
-    }
+    .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .article-hub { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); }
     .article-hub.hub-places { color: var(--orange); }
     .article-hub.hub-activities { color: var(--green); }
-    .article-card h3 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
-    .article-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; flex: 1; }
-    .article-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); display: inline-flex; align-items: center; gap: 0.25rem; }
+    .article-card h3 { font-size: 0.97rem; font-weight: 700; line-height: 1.4; color: var(--text); }
+    .article-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; flex: 1; }
+    .article-link { font-size: 0.83rem; font-weight: 600; color: var(--blue); display: inline-flex; align-items: center; gap: 0.2rem; }
     .hub-cta-row { text-align: center; }
     .btn-outline {
       display: inline-flex; align-items: center; gap: 0.4rem;
-      border: 2px solid var(--blue); color: var(--blue);
-      text-decoration: none; padding: 0.8rem 1.8rem;
-      border-radius: 12px; font-size: 0.95rem; font-weight: 700;
+      border: 1.5px solid var(--border); color: var(--text);
+      text-decoration: none; padding: 0.75rem 1.6rem;
+      border-radius: 12px; font-size: 0.9rem; font-weight: 600;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s; min-height: 48px;
+    }
+    .btn-outline:hover { background: var(--section-bg); border-color: var(--text); transform: translateY(-1px); }
+
+    /* APP SECTION — soft sell */
+    .app-section {
+      background: var(--section-bg);
+      border-top: 1px solid var(--border);
+    }
+    .app-ps-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+    }
+    .app-inner { display: flex; flex-direction: column; gap: 3rem; align-items: center; }
+    @media (min-width: 860px) { .app-inner { flex-direction: row; gap: 5rem; align-items: center; } }
+    .app-text { flex: 1; }
+    .app-text h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1rem; color: var(--text); }
+    .app-desc { font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem; max-width: 480px; }
+    .app-pricing { margin-bottom: 1.75rem; }
+    .price-row { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.35rem; font-size: 0.92rem; }
+    .price-row:last-child { margin-bottom: 0; }
+    .price-label { color: var(--muted); min-width: 60px; }
+    .price-value { font-weight: 600; color: var(--text); }
+    .price-badge { background: var(--blue-light); color: var(--blue); font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .app-store-btn {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      background: #000; color: #fff; text-decoration: none;
+      padding: 0.8rem 1.4rem; border-radius: 12px;
+      font-size: 0.85rem; font-weight: 600;
       transition: background 0.2s, transform 0.15s; min-height: 48px;
     }
-    .btn-outline:hover { background: var(--blue-light); transform: translateY(-2px); }
+    .app-store-btn:hover { background: #222; transform: translateY(-2px); }
+    .app-store-icon { font-size: 1.4rem; line-height: 1; }
+    .app-store-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .app-store-text small { font-size: 0.68rem; opacity: 0.65; font-weight: 400; }
+    .app-visual { flex-shrink: 0; width: 200px; }
+    @media (min-width: 860px) { .app-visual { width: 230px; } }
+    .iphone-frame {
+      position: relative; border-radius: 36px;
+      border: 3px solid #1a1a1a;
+      box-shadow: inset 0 0 0 2px #2a2a2a, 0 20px 48px rgba(0,0,0,0.15);
+      background: #000; overflow: hidden;
+    }
+    .iphone-notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 68px; height: 18px; background: #000; border-radius: 10px; z-index: 10; }
+    .iphone-frame img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 33px; }
 
-    /* ABOUT TEASER */
-    .about-section { background: #fff; }
-    .about-content { max-width: 720px; margin: 0 auto; }
-    .about-content p {
-      font-size: 1.05rem; color: #374151;
-      line-height: 1.8; margin-bottom: 1.2rem;
-    }
-    .about-sig { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
-    .about-sig-avatar {
-      width: 48px; height: 48px; background: var(--blue-mid);
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 1.2rem; flex-shrink: 0;
-    }
-    .about-sig-name { font-weight: 700; font-size: 0.95rem; }
-    .about-sig-role { font-size: 0.85rem; color: var(--muted); }
-    .about-link {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      color: var(--blue); font-weight: 700;
-      text-decoration: none; font-size: 0.95rem;
-      transition: gap 0.15s; margin-top: 1.5rem;
-    }
+    /* ABOUT — strengthened */
+    .about-section { background: #fff; border-top: 1px solid var(--border); }
+    .about-inner { max-width: 680px; margin: 0 auto; }
+    .about-inner p { font-size: 1.05rem; color: var(--text-light); line-height: 1.9; margin-bottom: 1.3rem; }
+    .about-inner p:last-child { margin-bottom: 0; }
+    .about-sig { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .about-sig-avatar { width: 44px; height: 44px; background: var(--blue-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .about-sig-name { font-weight: 700; font-size: 0.92rem; }
+    .about-sig-role { font-size: 0.82rem; color: var(--muted); }
+    .about-link { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--blue); font-weight: 600; text-decoration: none; font-size: 0.92rem; transition: gap 0.15s; margin-top: 1.5rem; }
     .about-link:hover { gap: 0.55rem; }
 
     /* FOOTER */
     footer { background: #111827; color: rgba(255,255,255,0.55); padding: 3rem 1.5rem 2.5rem; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-top {
-      display: flex; flex-direction: column;
-      gap: 2.5rem; margin-bottom: 2.5rem;
-    }
+    .footer-top { display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 2.5rem; }
     @media (min-width: 640px) { .footer-top { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
     .footer-brand { flex-shrink: 0; }
-    .footer-logo { font-size: 1.1rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.02em; }
+    .footer-logo { font-size: 1.05rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.02em; }
     .footer-logo span { color: var(--orange); }
-    .footer-tagline { font-size: 0.85rem; margin-top: 0.4rem; }
+    .footer-tagline { font-size: 0.83rem; margin-top: 0.4rem; }
     .footer-nav-groups { display: flex; flex-wrap: wrap; gap: 2.5rem; }
-    .footer-nav-group h4 {
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: rgba(255,255,255,0.3); margin-bottom: 0.75rem;
-    }
-    .footer-nav-group a {
-      display: block; color: rgba(255,255,255,0.55);
-      text-decoration: none; font-size: 0.88rem;
-      margin-bottom: 0.5rem; transition: color 0.15s;
-    }
+    .footer-nav-group h4 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 0.75rem; }
+    .footer-nav-group a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.15s; }
     .footer-nav-group a:hover { color: #fff; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 1.75rem;
-      display: flex; flex-direction: column;
-      gap: 0.75rem; align-items: center; text-align: center; font-size: 0.82rem;
-    }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; text-align: center; font-size: 0.8rem; }
     @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
     .footer-social { display: flex; gap: 1.25rem; }
-    .footer-social a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.15s; }
+    .footer-social a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.83rem; transition: color 0.15s; }
     .footer-social a:hover { color: #fff; }
 
-    /* FOCUS / ACCESSIBILITY */
     :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
   </style>
 </head>
@@ -471,13 +402,12 @@
         <li><a href="/journal/">Journal</a></li>
         <li><a href="/places/">Places</a></li>
         <li><a href="/activities/">Activities</a></li>
-        <li><a href="/#app">App</a></li>
         <li><a href="/blog/">Blog</a></li>
       </ul>
       <div class="nav-right">
         <a href="/de/" class="nav-lang" aria-label="Deutsche Version">🇩🇪 DE</a>
         <a href="/" class="nav-lang active" aria-label="English" aria-current="page">🇬🇧 EN</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">Download iOS App</a>
+        <a class="nav-cta" href="#app">The App ↓</a>
         <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
           <span></span><span></span><span></span>
         </button>
@@ -487,139 +417,117 @@
       <a href="/journal/">Journal</a>
       <a href="/places/">Places</a>
       <a href="/activities/">Activities</a>
-      <a href="/#app">App</a>
       <a href="/blog/">Blog</a>
+      <a href="#app">The App</a>
       <a href="/de/">🇩🇪 Deutsch</a>
     </div>
   </nav>
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO — editorial, content-first -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-inner">
-        <div class="hero-badge">🏔️ Indie iOS App · Made in Bavaria · No Subscription</div>
+        <p class="hero-eyebrow">Memory · Reflection · Life</p>
         <h1 id="hero-heading">Remember<br><em>Your Life</em></h1>
-        <p class="hero-tagline">Map every moment — journal, places, activities.</p>
-        <p class="hero-subtitle">An indie iOS app + knowledge hub for journaling, place tracking, and activity logging. Without subscriptions.</p>
+        <p class="hero-intro">A space dedicated to memory, reflection, and the art of remembering.</p>
+        <p class="hero-personal">Hi — I'm exploring how we capture life. Through journaling, place memory, and activity logging. What the research says. What actually works. What I've learned building a small app to do all three.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">
-            ⬇ Download on App Store
-          </a>
-          <a class="btn-secondary" href="#knowledge-hub">
-            Explore Knowledge Hub →
-          </a>
+          <a class="btn-primary" href="#topics">Explore the Topics →</a>
+          <a class="btn-app-link" href="#app">See the app I built →</a>
         </div>
-
-        <!-- PLACEHOLDER: Hero image — interactive Apple Maps view with coloured entry pins across cities/countries
-             Recommended size: 1360×765 px, WebP format. Alt: "Remember app map view showing journal entries as pins across multiple countries" -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-visual-ph">
-            <span class="ph-icon">🗺️</span>
-            <p><strong>PLACEHOLDER</strong>: Hero image<br><small>Map view with journal pins · 1360×765 px · WebP</small></p>
-          </div>
-        </div>
-
-        <p class="hero-trust">🇩🇪 Built in the Bavarian Alps · No subscription · GDPR compliant · iOS 17+</p>
       </div>
     </section>
 
-    <!-- THREE SUB-BRAND CARDS -->
-    <section class="sub-brands-section" aria-labelledby="subbrand-heading">
+    <!-- THREE EDITORIAL TOPIC CARDS -->
+    <section class="topics-section" id="topics" aria-labelledby="topics-heading">
       <div class="section-inner">
-        <div class="section-label">Three ways to remember</div>
-        <h2 class="section-title" id="subbrand-heading">One app. Three superpowers.</h2>
-        <p class="section-sub">Remember combines what used to take three separate apps into one beautiful, map-centred experience.</p>
-        <div class="cards-grid">
+        <div class="section-label">Three areas of exploration</div>
+        <h2 class="section-title" id="topics-heading">Where memory lives</h2>
+        <p class="section-sub">Journaling, places, and activities are three different lenses on the same question: how do we hold on to the life we're living?</p>
+        <div class="topics-grid">
 
-          <article class="brand-card card-journal">
-            <div class="card-icon" aria-hidden="true">📝</div>
-            <h3>Remember Journal</h3>
-            <p>Digital journaling done right. No subscriptions, just your thoughts — tied to the exact place you had them.</p>
-            <ul class="card-features" aria-label="Features">
-              <li>Daily entries</li>
-              <li>Photos</li>
-              <li>Reflection</li>
-            </ul>
-            <!-- PLACEHOLDER: Link to /journal/ sub-hub (Schritt 2) -->
-            <a class="card-link" href="/journal/">Explore Journal →</a>
+          <article class="topic-card card-journal">
+            <span class="topic-icon" aria-hidden="true">📝</span>
+            <h3>Journal</h3>
+            <p>The reflective art — methods, psychology, and the practice of writing yourself. Why putting words to experience changes how we remember it. How to build a practice that lasts.</p>
+            <a class="topic-link" href="/journal/">Explore Journal →</a>
           </article>
 
-          <article class="brand-card card-places">
-            <div class="card-icon" aria-hidden="true">📍</div>
-            <h3>Remember Places</h3>
-            <p>Never forget where you've been. Map every restaurant, café, hike, and hidden spot you've ever loved.</p>
-            <ul class="card-features" aria-label="Features">
-              <li>Map view</li>
-              <li>GPS</li>
-              <li>Photos</li>
-              <li>Ratings</li>
-            </ul>
-            <!-- PLACEHOLDER: Link to /places/ sub-hub (Schritt 3) -->
-            <a class="card-link" href="/places/">Explore Places →</a>
+          <article class="topic-card card-places">
+            <span class="topic-icon" aria-hidden="true">📍</span>
+            <h3>Places</h3>
+            <p>Spatial memory — why we remember locations so vividly, and how to capture them intentionally. The restaurants, trails, and corners of cities that shaped who we are.</p>
+            <a class="topic-link" href="/places/">Explore Places →</a>
           </article>
 
-          <article class="brand-card card-activities">
-            <div class="card-icon" aria-hidden="true">🏃</div>
-            <h3>Remember Activities</h3>
-            <p>Track activities beyond fitness. Hobbies, sports, concerts, life events — with stats that actually mean something.</p>
-            <ul class="card-features" aria-label="Features">
-              <li>100+ categories</li>
-              <li>Stats</li>
-              <li>Weekly reports</li>
-            </ul>
-            <!-- PLACEHOLDER: Link to /activities/ sub-hub (Schritt 4) -->
-            <a class="card-link" href="/activities/">Explore Activities →</a>
+          <article class="topic-card card-activities">
+            <span class="topic-icon" aria-hidden="true">🏃</span>
+            <h3>Activities</h3>
+            <p>Life logging — what we did, why it matters, how to track meaningfully. Beyond steps and calories: the hikes, concerts, dinners, and quiet evenings that make up a life.</p>
+            <a class="topic-link" href="/activities/">Explore Activities →</a>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- APP SECTION -->
-    <section class="app-section" id="app" aria-labelledby="app-heading">
+    <!-- WHY MEMORY — personal prose -->
+    <section class="why-section" aria-labelledby="why-heading">
       <div class="section-inner">
-        <div class="app-inner">
-          <div class="app-text">
-            <div class="section-label">The iOS App</div>
-            <h2 class="section-title" id="app-heading">All three,<br>in <em>one app.</em></h2>
-            <p class="section-sub">Remember combines journaling, place tracking, and activity logging — all pinned to an interactive Apple Maps view. Your life, mapped.</p>
-            <div class="app-pricing" role="note" aria-label="Pricing">
-              <div class="price-row">
-                <span class="price-label">Free</span>
-                <span class="price-value">Up to 100 entries</span>
-              </div>
-              <div class="price-row">
-                <span class="price-label">Unlock</span>
-                <span class="price-value">€4.99 · one-time</span>
-                <span class="price-badge">No Subscription</span>
-              </div>
-            </div>
-            <a class="app-store-btn" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener" aria-label="Download Remember on the App Store">
-              <span class="app-store-icon" aria-hidden="true"></span>
-              <span class="app-store-text">
-                <small>Download on the</small>
-                App Store
-              </span>
-            </a>
-          </div>
-          <div class="app-visual">
-            <!-- PLACEHOLDER: Replace screenshot-1.png with a hero app screenshot once final design is set -->
-            <div class="iphone-frame">
-              <div class="iphone-notch" aria-hidden="true"></div>
-              <img src="/images/screenshot-1.png" alt="Remember app showing interactive map with journal entry pins across multiple cities" loading="lazy">
-            </div>
-          </div>
+        <div class="why-inner">
+          <div class="section-label">Why think about remembering?</div>
+          <h2 class="section-title" id="why-heading">Memory shapes<br>who we are</h2>
+          <p>The places we've been. The thoughts we had on a Tuesday afternoon in October. The things we did and the things we almost did. All of it shapes us — and almost all of it fades.</p>
+          <p>Our minds are imperfect archives. <strong>We forget more than we keep.</strong> Not just names and dates, but textures: how a place felt, what we were thinking at a particular moment, why something mattered so much at the time.</p>
+          <p>So I started exploring how we can hold on to more of it — through writing, mapping, and the quiet discipline of paying attention. This site shares what I've learned along the way.</p>
+          <p>Sometimes it's personal. Sometimes it's rooted in psychology and neuroscience. It's always free to read.</p>
         </div>
       </div>
     </section>
 
-    <!-- KNOWLEDGE HUB TEASER -->
+    <!-- SCIENCE TEASER -->
+    <section class="science-section" aria-labelledby="science-heading">
+      <div class="section-inner">
+        <div class="section-label">Rooted in research</div>
+        <h2 class="section-title" id="science-heading">The science behind remembering</h2>
+        <p class="section-sub">Memory isn't passive. It's a skill — shaped by attention, encoding, and retrieval. Here's some of what the research says.</p>
+        <div class="science-grid">
+
+          <!-- PLACEHOLDER: Create article at /science/science-of-memory/ -->
+          <a class="science-card" href="/science/science-of-memory/">
+            <span class="science-tag">🧠 Neuroscience</span>
+            <h3>The science of memory — how the brain encodes, stores, and forgets</h3>
+            <p>Why some experiences stick instantly while others vanish by morning. What memory consolidation actually means and how to use it.</p>
+            <span class="science-link">Read more →</span>
+          </a>
+
+          <!-- PLACEHOLDER: Create article at /science/why-journaling-works/ -->
+          <a class="science-card" href="/science/why-journaling-works/">
+            <span class="science-tag">📝 Psychology</span>
+            <h3>Why journaling works — the research behind expressive writing</h3>
+            <p>James Pennebaker's landmark studies showed that writing about experience improves memory, wellbeing, and clarity. Here's what the evidence shows.</p>
+            <span class="science-link">Read more →</span>
+          </a>
+
+          <!-- PLACEHOLDER: Create article at /science/place-based-memory/ -->
+          <a class="science-card" href="/science/place-based-memory/">
+            <span class="science-tag">📍 Cognitive Science</span>
+            <h3>Place-based memory — why location is the brain's favourite anchor</h3>
+            <p>The method of loci is 2,500 years old. Modern neuroscience explains why: the hippocampus ties memory to place almost automatically.</p>
+            <span class="science-link">Read more →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE HUB — latest reads -->
     <section class="hub-section" id="knowledge-hub" aria-labelledby="hub-heading">
       <div class="section-inner">
-        <div class="section-label">Knowledge Hub</div>
-        <h2 class="section-title" id="hub-heading">More than an app.</h2>
-        <p class="section-sub">Read, learn, and discover — guides, tips, and inspiration for journaling, places, and activities.</p>
+        <div class="section-label">From the knowledge hub</div>
+        <h2 class="section-title" id="hub-heading">Latest reads</h2>
+        <p class="section-sub">Practical guides and quiet reflections on journaling, places, and activities.</p>
         <div class="articles-grid">
 
           <!-- PLACEHOLDER: Create article at /journal/how-to-start-a-digital-journal/ -->
@@ -648,29 +556,68 @@
 
         </div>
         <div class="hub-cta-row">
-          <!-- PLACEHOLDER: /blog/ doesn't exist yet — create in Schritt 5 -->
+          <!-- PLACEHOLDER: /blog/ doesn't exist yet -->
           <a class="btn-outline" href="/blog/">Explore all articles →</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT TEASER -->
+    <!-- APP SECTION — soft sell, clearly secondary -->
+    <section class="app-section" id="app" aria-labelledby="app-heading">
+      <div class="section-inner">
+        <div class="app-inner">
+          <div class="app-text">
+            <p class="app-ps-label">PS: I also built an app for this</p>
+            <h2 id="app-heading">While researching these topics, I found no app combining all three — so I built one.</h2>
+            <p class="app-desc">Remember brings journaling, place tracking, and activity logging together on an interactive map. Every entry, every place, every memory — in one quiet, offline-first iOS app. No subscription. No account required.</p>
+            <div class="app-pricing">
+              <div class="price-row">
+                <span class="price-label">Free</span>
+                <span class="price-value">Up to 100 entries</span>
+              </div>
+              <div class="price-row">
+                <span class="price-label">Unlock</span>
+                <span class="price-value">€4.99 · one-time</span>
+                <span class="price-badge">No subscription</span>
+              </div>
+            </div>
+            <a class="app-store-btn" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener" aria-label="Download Remember on the App Store">
+              <span class="app-store-icon" aria-hidden="true"></span>
+              <span class="app-store-text">
+                <small>Download on the</small>
+                App Store
+              </span>
+            </a>
+          </div>
+          <div class="app-visual">
+            <!-- PLACEHOLDER: Replace with final app screenshot -->
+            <div class="iphone-frame">
+              <div class="iphone-notch" aria-hidden="true"></div>
+              <img src="/images/screenshot-1.png" alt="Remember app showing interactive map with journal entry pins" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT — strengthened, personal -->
     <section class="about-section" aria-labelledby="about-heading">
       <div class="section-inner">
-        <div class="section-label">The maker</div>
-        <h2 class="section-title" id="about-heading">Built quietly.<br><em>With care.</em></h2>
-        <div class="about-content">
-          <p>Hi, I'm Florian K. — indie iOS developer from the Bavarian Alps. No corporate ties, no VC money, no growth-at-all-costs mentality. Just tools that respect you and your time.</p>
-          <p>Remember is a one-person project built on a simple belief: the software you use to remember your life should be something you own, not something you rent. I charge once, ship updates for free, and answer every support email personally.</p>
+        <div class="about-inner">
+          <div class="section-label">About this project</div>
+          <h2 class="section-title" id="about-heading">Built quietly.<br><em>With care.</em></h2>
+          <p>Built quietly by F. Klepper — an indie iOS dev from the Bavarian Alps. No corporate ties, no subscriptions, no tracking of any kind. Just a personal exploration of how we hold on to the life we're living.</p>
+          <p>This project started as a question: why is it so hard to remember the good things? And it turned into a knowledge hub, a research habit, and eventually a small iOS app. All of it solo, all of it by hand.</p>
+          <p>If something here is useful to you — an article, an idea, or the app itself — that's more than enough.</p>
           <div class="about-sig">
             <div class="about-sig-avatar" aria-hidden="true">👨‍💻</div>
             <div>
-              <div class="about-sig-name">Florian K.</div>
+              <div class="about-sig-name">F. Klepper</div>
               <div class="about-sig-role">Indie iOS Developer · Murnau am Staffelsee, Bavaria 🏔️</div>
             </div>
           </div>
-          <!-- PLACEHOLDER: Create /about/ page (after sub-hubs) -->
-          <a class="about-link" href="/about/">Learn more about Remember →</a>
+          <!-- PLACEHOLDER: Create /about/ page -->
+          <a class="about-link" href="/about/">More about this project →</a>
         </div>
       </div>
     </section>
@@ -683,11 +630,11 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a class="footer-logo" href="/">Remember<span>.</span></a>
-          <p class="footer-tagline">Map every moment. No subscription.</p>
+          <p class="footer-tagline">Memory, reflection, and the art of remembering.</p>
         </div>
         <nav class="footer-nav-groups" aria-label="Footer navigation">
           <div class="footer-nav-group">
-            <h4>Explore</h4>
+            <h4>Topics</h4>
             <a href="/journal/">Journal</a>
             <a href="/places/">Places</a>
             <a href="/activities/">Activities</a>
@@ -700,11 +647,11 @@
             <a href="/journaling-apps-vergleich.html">App Comparison (DE)</a>
           </div>
           <div class="footer-nav-group">
-            <h4>Company</h4>
+            <h4>Project</h4>
             <a href="/about/">About</a>
             <a href="/impressum.html">Impressum</a>
             <a href="/datenschutz.html">Privacy / Datenschutz</a>
-            <a href="mailto:support@remember-journal.com">Support</a>
+            <a href="mailto:support@remember-journal.com">Contact</a>
           </div>
           <div class="footer-nav-group">
             <h4>Language</h4>
@@ -725,7 +672,6 @@
   </footer>
 
   <script>
-    // Hamburger menu toggle
     const btn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
@@ -741,7 +687,6 @@
       });
     });
 
-    // PostHog
     window.addEventListener('load', () => {
       if (!window.posthog) return;
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
