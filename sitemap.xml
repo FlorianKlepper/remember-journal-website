@@ -3,14 +3,15 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://remember-journal.com/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://remember-journal.com/"/>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://remember-journal.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/en/"/>
+    <loc>https://remember-journal.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/"/>
     <priority>1.0</priority>
   </url>
   <url>
