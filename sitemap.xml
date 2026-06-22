@@ -59,7 +59,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Articles: Day One Alternative (new URLs) -->
+  <!-- Articles: Journal -->
   <url>
     <loc>https://remember-journal.com/journal/day-one-alternative/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/journal/day-one-alternative/"/>
@@ -72,8 +72,74 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/journal/day-one-alternative/"/>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://remember-journal.com/journal/how-to-start-a-digital-journal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/journal/how-to-start-a-digital-journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/journal/digitales-tagebuch-anfangen/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/journal/digitales-tagebuch-anfangen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/journal/digitales-tagebuch-anfangen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/journal/how-to-start-a-digital-journal/"/>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Legacy pages (legal/utility) -->
+  <!-- Articles: Places -->
+  <url>
+    <loc>https://remember-journal.com/places/remember-every-restaurant/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/places/remember-every-restaurant/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/places/jedes-restaurant-merken/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/places/jedes-restaurant-merken/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/places/jedes-restaurant-merken/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/places/remember-every-restaurant/"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles: Activities -->
+  <url>
+    <loc>https://remember-journal.com/activities/activity-tracking-beyond-fitness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/activities/activity-tracking-beyond-fitness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/activities/aktivitaeten-tracken-jenseits-fitness/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/activities/aktivitaeten-tracken-jenseits-fitness/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/activities/aktivitaeten-tracken-jenseits-fitness/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/activities/activity-tracking-beyond-fitness/"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles: Science -->
+  <url>
+    <loc>https://remember-journal.com/science/why-journaling-works/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/science/why-journaling-works/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/science/warum-tagebuch-schreiben-wirkt/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/science/warum-tagebuch-schreiben-wirkt/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/science/warum-tagebuch-schreiben-wirkt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/science/why-journaling-works/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/science/place-based-memory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/science/place-based-memory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/science/ortsgebundenes-gedaechtnis/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/science/ortsgebundenes-gedaechtnis/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/science/ortsgebundenes-gedaechtnis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/science/place-based-memory/"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legacy / utility -->
   <url>
     <loc>https://remember-journal.com/journaling-apps-vergleich.html</loc>
     <priority>0.5</priority>
