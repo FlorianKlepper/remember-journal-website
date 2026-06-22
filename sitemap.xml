@@ -139,6 +139,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- About -->
+  <url>
+    <loc>https://remember-journal.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/about/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/about/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/about/"/>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Legacy / utility -->
   <url>
     <loc>https://remember-journal.com/journaling-apps-vergleich.html</loc>

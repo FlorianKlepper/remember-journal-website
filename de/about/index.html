@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Die Geschichte hinter Remember | Über das Projekt</title>
+  <meta name="description" content="Eine Indie-iOS-App und ein Wissens-Hub über Erinnerung — solo entwickelt in Bayern. Kein Abo, kein Tracking, keine Konzernanbindung. Die Geschichte hinter Remember.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="canonical" href="https://remember-journal.com/de/about/">
+  <link rel="alternate" hreflang="de" href="https://remember-journal.com/de/about/" />
+  <link rel="alternate" hreflang="en" href="https://remember-journal.com/about/" />
+  <link rel="alternate" hreflang="x-default" href="https://remember-journal.com/about/" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Die Geschichte hinter Remember">
+  <meta property="og:description" content="Eine Indie-iOS-App und ein Wissens-Hub über Erinnerung — solo entwickelt in Bayern. Kein Abo, kein Tracking, keine Konzernanbindung.">
+  <meta property="og:url" content="https://remember-journal.com/de/about/">
+  <meta property="og:image" content="https://remember-journal.com/images/screenshot-1.png">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Die Geschichte hinter Remember">
+  <meta name="twitter:description" content="Eine Indie-iOS-App und ein Wissens-Hub über Erinnerung — solo entwickelt in Bayern. Kein Abo, kein Tracking.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Die Geschichte hinter Remember",
+    "description": "Eine Indie-iOS-App und ein Wissens-Hub über Erinnerung, Tagebuch, Orte und Aktivitäten — solo entwickelt in Bayern.",
+    "url": "https://remember-journal.com/de/about/",
+    "inLanguage": "de",
+    "author": {
+      "@type": "Person",
+      "name": "Florian K.",
+      "address": { "@type": "PostalAddress", "addressRegion": "Bayern", "addressCountry": "DE" }
+    },
+    "publisher": { "@type": "Organization", "name": "Remember Journal", "url": "https://remember-journal.com" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://remember-journal.com/de/" },
+      { "@type": "ListItem", "position": 2, "name": "Über das Projekt", "item": "https://remember-journal.com/de/about/" }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRG8Y8J81"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BPRG8Y8J81');
+  </script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_distinct_id getGroups group resetGroups setPersonProperties resetPersonProperties reset get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_qGRQJPTub2QqdxjLzGNf5tknH8Bkf699UBX6aPCzYPkM', { api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only', capture_pageview: false });
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #2563eb; --blue-dark: #1d4ed8;
+      --blue-light: #eff6ff; --blue-mid: #dbeafe;
+      --orange: #f97316;
+      --green: #059669;
+      --text: #1f2937; --text-light: #374151;
+      --muted: #6b7280; --border: #e5e7eb;
+      --bg: #ffffff; --section-bg: #fafafa;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; gap: 1.5rem; }
+    .nav-logo { font-size: 1.05rem; font-weight: 800; color: var(--blue); text-decoration: none; white-space: nowrap; letter-spacing: -0.02em; flex-shrink: 0; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: none; list-style: none; gap: 0.1rem; flex: 1; }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-links a { display: block; padding: 0.45rem 0.75rem; font-size: 0.88rem; font-weight: 500; color: var(--text); text-decoration: none; border-radius: 8px; transition: background 0.15s, color 0.15s; }
+    .nav-links a:hover { background: var(--blue-light); color: var(--blue); }
+    .nav-right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; flex-shrink: 0; }
+    .nav-lang { font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.3rem 0.5rem; border-radius: 6px; transition: color 0.15s; }
+    .nav-lang:hover { color: var(--blue); }
+    .nav-lang.active { color: var(--blue); font-weight: 600; }
+    .nav-cta { background: transparent; color: var(--muted); text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 22px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border); transition: color 0.2s, border-color 0.2s; white-space: nowrap; min-height: 44px; display: flex; align-items: center; }
+    .nav-cta:hover { color: var(--text); border-color: var(--text); }
+    .nav-hamburger { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; border-radius: 8px; min-width: 44px; min-height: 44px; }
+    @media (min-width: 768px) { .nav-hamburger { display: none; } }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; padding: 1rem 1.5rem 1.5rem; border-top: 1px solid var(--border); background: #fff; }
+    .nav-mobile.open { display: block; }
+    .nav-mobile a { display: block; padding: 0.8rem 0; font-size: 1rem; font-weight: 500; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--blue); }
+
+    .breadcrumb { max-width: 760px; margin: 0 auto; padding: 1.25rem 1.5rem 0; font-size: 0.82rem; color: var(--muted); }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 0.4rem; opacity: 0.5; }
+
+    .article-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .article-header { margin-bottom: 3rem; }
+    .article-page-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; display: block; }
+    h1.article-title { font-size: clamp(1.75rem, 4vw, 2.6rem); font-weight: 900; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 1.25rem; color: var(--text); }
+
+    .article-body { font-size: 1.05rem; color: var(--text-light); line-height: 1.9; }
+    .article-body p { margin-bottom: 1.5rem; }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-body h2 { font-size: clamp(1.2rem, 3vw, 1.55rem); font-weight: 800; color: var(--text); letter-spacing: -0.025em; line-height: 1.2; margin: 3rem 0 1.1rem; }
+    .article-body hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+    .article-body strong { color: var(--text); font-weight: 700; }
+    .article-body a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--blue-dark); }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    .tech-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.5rem; }
+    .tech-pill { background: var(--blue-light); color: var(--blue); font-size: 0.78rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 20px; letter-spacing: 0.02em; }
+
+    .about-cta-box { background: var(--section-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-top: 3rem; }
+    .about-cta-box h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; color: var(--text); }
+    .cta-links { display: flex; flex-direction: column; gap: 0.75rem; }
+    @media (min-width: 500px) { .cta-links { flex-direction: row; flex-wrap: wrap; } }
+    .cta-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.92rem; font-weight: 600; color: var(--blue); text-decoration: none; padding: 0.55rem 1.1rem; border: 1.5px solid var(--blue-mid); border-radius: 10px; transition: background 0.15s, border-color 0.15s; }
+    .cta-link:hover { background: var(--blue-light); border-color: var(--blue); }
+    .cta-link.app-link { color: var(--text); border-color: var(--border); }
+    .cta-link.app-link:hover { background: var(--section-bg); border-color: var(--text); }
+
+    .article-sig { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; }
+    .article-sig-avatar { width: 44px; height: 44px; background: var(--blue-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; color: var(--blue); flex-shrink: 0; letter-spacing: -0.02em; }
+    .article-sig-name { font-weight: 700; font-size: 0.9rem; }
+    .article-sig-role { font-size: 0.8rem; color: var(--muted); }
+
+    footer { background: #111827; color: rgba(255,255,255,0.55); padding: 3rem 1.5rem 2.5rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 2.5rem; }
+    @media (min-width: 640px) { .footer-top { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .footer-brand { flex-shrink: 0; }
+    .footer-logo { font-size: 1.05rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.02em; }
+    .footer-logo span { color: var(--orange); }
+    .footer-tagline { font-size: 0.83rem; margin-top: 0.4rem; }
+    .footer-nav-groups { display: flex; flex-wrap: wrap; gap: 2.5rem; }
+    .footer-nav-group h4 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 0.75rem; }
+    .footer-nav-group a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.15s; }
+    .footer-nav-group a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; text-align: center; font-size: 0.8rem; }
+    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Hauptnavigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/de/" aria-label="Remember – Startseite">Remember<span>.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="/de/journal/">Tagebuch</a></li>
+        <li><a href="/de/places/">Orte</a></li>
+        <li><a href="/de/activities/">Aktivitäten</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="/de/about/" class="nav-lang active" aria-label="Deutsche Version" aria-current="page">🇩🇪 DE</a>
+        <a href="/about/" class="nav-lang" aria-label="English version">🇬🇧 EN</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">Die App ↗</a>
+        <button class="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+      <a href="/de/journal/">Tagebuch</a>
+      <a href="/de/places/">Orte</a>
+      <a href="/de/activities/">Aktivitäten</a>
+      <a href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">Die App ↗</a>
+      <a href="/about/">🇬🇧 English</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="breadcrumb" aria-label="Brotkrumennavigation">
+      <a href="/de/">Startseite</a><span>›</span>Über das Projekt
+    </div>
+
+    <div class="article-wrap">
+      <header class="article-header">
+        <span class="article-page-label">Über dieses Projekt</span>
+        <h1 class="article-title">Die Geschichte hinter Remember</h1>
+      </header>
+
+      <div class="article-body">
+
+        <p>Ich begann vor einigen Jahren, mir eine Frage zu stellen: Warum ist es so schwer, die guten Dinge festzuhalten?</p>
+
+        <p>Nicht die großen — die bleiben. Es sind die kleinen, die verschwinden. Das Restaurant, in dem alles gestimmt hat. Das Buch, das mein Denken für ein paar Monate verändert hat. Das Gespräch auf einem Spaziergang. Der Abend, der sich damals genau so angefühlt hat, wie ich mir mehr davon wünschte.</p>
+
+        <p>Als ich versuchte, mich genau daran zu erinnern, war das meiste davon weg. Das emotionale Echo war noch da — <em>das war eine gute Zeit</em> — aber die Details hatten sich aufgelöst.</p>
+
+        <p>Diese Frage hat mich, langsam, zu diesem Projekt geführt.</p>
+
+        <hr>
+
+        <h2>Die Recherche-Gewohnheit</h2>
+
+        <p>Ich begann, über Gedächtnis zu lesen. Darüber, wie es wirklich funktioniert — nicht, wie wir es uns vorstellen. Über den Hippocampus und Place Cells. Über James Pennebakers Arbeit zum expressiven Schreiben. Darüber, warum räumlicher Kontext Erinnerungen haltbarer macht. Darüber, warum das Aufschreiben am selben Abend etwas bewahrt, was eine Woche später nicht mehr zu retten ist.</p>
+
+        <p>Das meiste, was ich fand, war über akademische Papers und vereinzelte gute Bücher verstreut. Es gab keinen Ort, der es lesbar zusammenführte — die Wissenschaft, die praktischen Methoden, die ehrliche persönliche Erfahrung beim Anwenden.</p>
+
+        <p>Also begann ich selbst darüber zu schreiben. Zunächst für mich, dann als Gewohnheit, dann als etwas, das ich teilen wollte.</p>
+
+        <p>Die Bereiche <a href="/de/journal/">Tagebuch</a>, <a href="/de/places/">Orte</a> und <a href="/de/activities/">Aktivitäten</a> auf dieser Seite sind diese Gewohnheit, öffentlich gemacht: Notizen darüber, was ich gelernt habe, wie ich es versuche anzuwenden und was die Forschung wirklich sagt — im Gegensatz zu dem, was die Wellness-Industrie behauptet.</p>
+
+        <hr>
+
+        <h2>Die App</h2>
+
+        <p>Während ich diese Recherche betrieb, stieß ich in der Praxis immer wieder auf dasselbe Problem.</p>
+
+        <p>Ich schreibe Tagebuch. Ich halte Orte fest. Ich logge Aktivitäten. Diese drei Dinge gerieten immer wieder aneinander — ein Tagebucheintrag, der eigentlich über einen Ort handelte; ein Ort, der eigentlich über das stand, was ich dort getan hatte; eine Aktivität, die eine Notiz und einen Standort verdient hätte.</p>
+
+        <p>Ich suchte nach einer App, die all das verbindet. Am besten auf einer Karte, denn räumlicher Kontext ist der eigentliche Kern. Ich fand keine, die so funktionierte, wie ich es wollte.</p>
+
+        <p>Also habe ich sie gebaut.</p>
+
+        <p>Remember ist eine iOS-App, entwickelt mit SwiftUI, SwiftData und MapKit. Sie funktioniert offline-first — alles liegt auf dem Gerät und synchronisiert über iCloud, wenn aktiviert. Kein Account, kein Tracking, kein Abo. Einmal zahlen (4,99 €) oder kostenlos bis zu 100 Einträge nutzen — das ist die gesamte Transaktion.</p>
+
+        <ul class="tech-list" aria-label="Entwickelt mit">
+          <li class="tech-pill">SwiftUI</li>
+          <li class="tech-pill">SwiftData</li>
+          <li class="tech-pill">MapKit</li>
+          <li class="tech-pill">iCloud-Sync</li>
+          <li class="tech-pill">Offline-first</li>
+          <li class="tech-pill">Kein Account</li>
+          <li class="tech-pill">Kein Abo</li>
+        </ul>
+
+        <p>Es hat länger gedauert als erwartet. Solo etwas zu bauen dauert immer länger. Aber das Ergebnis ist die App, die ich selbst nutzen wollte — und das ist Grund genug, sie gebaut zu haben.</p>
+
+        <hr>
+
+        <h2>Was dieses Projekt ist — und was nicht</h2>
+
+        <p>Das hier ist kein Startup. Es gibt kein Wachstumsziel, keinen Investor, keine Roadmap, die von den OKRs anderer getrieben wird — nur von der eigenen Neugier.</p>
+
+        <p>Es ist ein persönliches Projekt, das ernst wurde. Eine Person, aus einer kleinen Stadt in der Nähe von München in Bayern, die versucht, eine Frage zu beantworten, die sich als erstaunlich tief herausgestellt hat.</p>
+
+        <p>Der Wissens-Hub ist kostenlos zu lesen — und das wird er bleiben. Die App ist bewusst günstig gehalten. Ich versuche nicht, ein Geschäft aufzubauen, das Menschen, die ihr Leben erinnern wollen, maximalen Wert abschöpft — das wäre eine merkwürdige Art, an dieses Thema heranzugehen.</p>
+
+        <p>Was ich mir wünsche, falls ich mir überhaupt etwas jenseits des Projekts selbst wünsche: dass jemand hier etwas liest und denkt: <em>Ja, genau das ist es, was ich nicht benennen konnte.</em> Oder die App nutzt und merkt, dass sie passt.</p>
+
+        <p>Das reicht.</p>
+
+        <hr>
+
+        <h2>Ein Hinweis zur Privatsphäre</h2>
+
+        <p>Ich halte dieses Projekt etwas getrennt von meinem Alltag — deshalb finden Sie mich hier als F. Klepper und nicht unter einem vollständigen Namen, der an ein LinkedIn-Profil geknüpft ist. Es ist kein Geheimnis — nur die Präferenz, persönliche Arbeit persönlich zu halten.</p>
+
+        <p>Wer Kontakt aufnehmen möchte: <a href="mailto:support@remember-journal.com">support@remember-journal.com</a> ist die richtige Adresse. Ich lese alles und antworte auf das meiste.</p>
+
+        <hr>
+
+        <div class="about-cta-box">
+          <h2>Hier einsteigen</h2>
+          <div class="cta-links">
+            <a class="cta-link" href="/de/journal/">📝 Tagebuch-Hub</a>
+            <a class="cta-link" href="/de/places/">📍 Orte-Hub</a>
+            <a class="cta-link" href="/de/activities/">🏃 Aktivitäten-Hub</a>
+            <a class="cta-link app-link" href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener"> App Store ↗</a>
+          </div>
+        </div>
+
+        <div class="article-sig">
+          <div class="article-sig-avatar" aria-hidden="true">FK</div>
+          <div>
+            <div class="article-sig-name">F. Klepper</div>
+            <div class="article-sig-role">Indie iOS Entwickler · irgendwo in Bayern 🏔️</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="/de/">Remember<span>.</span></a>
+          <p class="footer-tagline">Erinnerung, Reflexion und die Disziplin des Aufmerksamseins.</p>
+        </div>
+        <nav class="footer-nav-groups" aria-label="Footer-Navigation">
+          <div class="footer-nav-group">
+            <h4>Themen</h4>
+            <a href="/de/journal/">Tagebuch</a>
+            <a href="/de/places/">Orte</a>
+            <a href="/de/activities/">Aktivitäten</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>App</h4>
+            <a href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">App Store</a>
+            <a href="/de/journal/tagebuch-app-ohne-abo/">Day One Alternative</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Projekt</h4>
+            <a href="/de/about/">Über das Projekt</a>
+            <a href="/impressum.html">Impressum</a>
+            <a href="/datenschutz.html">Datenschutz</a>
+            <a href="mailto:support@remember-journal.com">Kontakt</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Sprache</h4>
+            <a href="/de/">🇩🇪 Deutsch</a>
+            <a href="/">🇬🇧 English</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 F. Klepper · Made in Bavaria 🏔️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    window.addEventListener('load', () => {
+      if (!window.posthog) return;
+      const params = new URLSearchParams(window.location.search);
+      posthog.capture('page_view_detailed', {
+        page: window.location.pathname, language: 'de',
+        referrer: document.referrer || 'direct',
+        device: /Mobile|Android|iPhone/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+        utm_source: params.get('utm_source') || 'none'
+      });
+    });
+  </script>
+
+</body>
+</html>
