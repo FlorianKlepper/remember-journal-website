@@ -116,6 +116,19 @@
 
   <!-- Articles: Places -->
   <url>
+    <loc>https://remember-journal.com/places/why-we-forget-places/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/places/why-we-forget-places/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/places/warum-wir-orte-vergessen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://remember-journal.com/places/why-we-forget-places/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/places/warum-wir-orte-vergessen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/places/warum-wir-orte-vergessen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/places/why-we-forget-places/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://remember-journal.com/places/remember-every-restaurant/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/places/remember-every-restaurant/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/places/jedes-restaurant-merken/"/>
