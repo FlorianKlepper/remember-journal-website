@@ -440,7 +440,7 @@
         <p class="hero-personal">Hi — I'm exploring what helps us remember: what the research says, what actually works, and what I've learned building a small app to do all three.</p>
         <div class="hero-actions">
           <a class="btn-primary" href="#topics">Explore the Topics →</a>
-          <a class="btn-app-link" href="#app">See the app I built →</a>
+          <a class="btn-primary" href="#app">Explore the app I built →</a>
         </div>
       </div>
     </section>
@@ -698,11 +698,23 @@
 
     window.addEventListener('load', () => {
       if (!window.posthog) return;
+
+      const exploreBtn = document.querySelector('.btn-primary[href="#topics"]');
+      if (exploreBtn) exploreBtn.addEventListener('click', () => {
+        posthog.capture('homepage_path', { path: 'explore' });
+      });
+
+      const appBtn = document.querySelector('.btn-primary[href="#app"]');
+      if (appBtn) appBtn.addEventListener('click', () => {
+        posthog.capture('homepage_path', { path: 'app' });
+      });
+
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
         link.addEventListener('click', () => {
-          posthog.capture('app_store_clicked', { source: 'homepage_en', page: window.location.pathname, language: 'en' });
+          posthog.capture('appstore_click', { source: 'homepage' });
         });
       });
+
       const params = new URLSearchParams(window.location.search);
       posthog.capture('page_view_detailed', {
         language: 'en', page: window.location.pathname,

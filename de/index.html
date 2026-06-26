@@ -283,7 +283,7 @@
         <p class="hero-personal">Ich erforsche, wie wir das Leben festhalten — durch Tagebuch schreiben, Orte merken und Aktivitäten loggen. Was die Forschung sagt. Was wirklich funktioniert. Was ich dabei gelernt habe, während ich eine kleine App dafür gebaut habe.</p>
         <div class="hero-actions">
           <a class="btn-primary" href="#topics">Die Themen entdecken →</a>
-          <a class="btn-app-link" href="#app">Die App, die ich gebaut habe →</a>
+          <a class="btn-primary" href="#app">Die App entdecken →</a>
         </div>
       </div>
     </section>
@@ -525,11 +525,23 @@
 
     window.addEventListener('load', () => {
       if (!window.posthog) return;
+
+      const exploreBtn = document.querySelector('.btn-primary[href="#topics"]');
+      if (exploreBtn) exploreBtn.addEventListener('click', () => {
+        posthog.capture('homepage_path', { path: 'explore' });
+      });
+
+      const appBtn = document.querySelector('.btn-primary[href="#app"]');
+      if (appBtn) appBtn.addEventListener('click', () => {
+        posthog.capture('homepage_path', { path: 'app' });
+      });
+
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
         link.addEventListener('click', () => {
-          posthog.capture('app_store_clicked', { source: 'homepage_de', page: window.location.pathname, language: 'de' });
+          posthog.capture('appstore_click', { source: 'homepage' });
         });
       });
+
       const params = new URLSearchParams(window.location.search);
       posthog.capture('page_view_detailed', {
         language: 'de', page: window.location.pathname,
