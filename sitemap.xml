@@ -143,6 +143,19 @@
 
   <!-- Articles: Activities -->
   <url>
+    <loc>https://remember-journal.com/activities/tracking-without-obsession/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/activities/tracking-without-obsession/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/activities/tracken-ohne-zwang/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://remember-journal.com/activities/tracking-without-obsession/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://remember-journal.com/de/activities/tracken-ohne-zwang/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/activities/tracken-ohne-zwang/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/activities/tracking-without-obsession/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://remember-journal.com/activities/activity-tracking-beyond-fitness/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://remember-journal.com/activities/activity-tracking-beyond-fitness/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://remember-journal.com/de/activities/aktivitaeten-tracken-jenseits-fitness/"/>
