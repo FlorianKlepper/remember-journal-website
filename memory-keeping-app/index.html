@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Remember — the memory keeping app for your whole life</title>
+  <meta name="description" content="Remember is a memory keeping app that captures words, places and activities — as a journal and on a map. Private, offline-first, no subscription. One-time €4.99.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="canonical" href="https://remember-journal.com/memory-keeping-app/">
+  <link rel="alternate" hreflang="en" href="https://remember-journal.com/memory-keeping-app/" />
+  <link rel="alternate" hreflang="de" href="https://remember-journal.com/de/memory-keeping-app/" />
+  <link rel="alternate" hreflang="x-default" href="https://remember-journal.com/memory-keeping-app/" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Remember — the memory keeping app for your whole life">
+  <meta property="og:description" content="Journal, places, and activities — all in one memory keeping app, on a map and as a timeline. Private, offline-first, no subscription.">
+  <meta property="og:url" content="https://remember-journal.com/memory-keeping-app/">
+  <meta property="og:image" content="https://remember-journal.com/images/screenshot-1.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Remember — the memory keeping app for your whole life">
+  <meta name="twitter:description" content="Journal, places, and activities — all in one, on a map. Private, offline-first, no subscription.">
+  <meta name="twitter:image" content="https://remember-journal.com/images/screenshot-1.png">
+
+  <!-- Schema.org: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Remember – Life Journal",
+    "operatingSystem": "iOS 17+",
+    "applicationCategory": "LifestyleApplication",
+    "description": "A memory keeping app for iPhone that combines journal, places and activities. Capture what you wrote, where you were and what you did — as a timeline and on an interactive map. Private, offline-first, one-time purchase, no subscription.",
+    "url": "https://remember-journal.com",
+    "downloadUrl": "https://apps.apple.com/app/id6762295068?pt=PROVIDER&ct=lp_memory_en",
+    "author": { "@type": "Person", "name": "Florian K.", "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" } },
+    "offers": [
+      { "@type": "Offer", "name": "Free (up to 100 entries)", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Unlimited (one-time)", "price": "4.99", "priceCurrency": "EUR", "description": "One-time purchase, no subscription, unlimited entries forever" }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Remember a scrapbook or photo app?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Remember is a memory keeping app built around written entries — journal notes, places visited, and activities logged — with an optional photo attached to each. It's not about creating photo collages or printed albums. The focus is on capturing what happened, where, and what it felt like, in a format you can search and revisit years later." }
+      },
+      {
+        "@type": "Question",
+        "name": "What can I keep besides photos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Anything worth remembering: a journal entry about an evening out, the name and location of a restaurant you loved, a hike you want to find again, a concert, a book you finished, a trip, a conversation worth keeping. Each entry can have a written note, a GPS location, a category (from 100 options), a star rating, a date, and a photo. The combination is what makes each memory retrievable later." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a subscription?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Remember costs €4.99 once. The free version supports up to 100 entries — enough to try the full experience properly. One payment unlocks unlimited entries forever. No annual renewals, no price increases, no in-app advertising." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data private? Does it work offline?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes to both. All data is stored locally on your iPhone — there is no Remember server, no advertising, no third-party tracking, and no account required. You can create entries, write notes, add photos and record GPS coordinates entirely offline. The app is built in Munich, Germany, and is fully GDPR compliant. Sync is via Apple iCloud if you choose to enable it." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Remember Journal", "item": "https://remember-journal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Memory Keeping App", "item": "https://remember-journal.com/memory-keeping-app/" }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRG8Y8J81"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BPRG8Y8J81');
+  </script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_distinct_id getGroups group resetGroups setPersonProperties resetPersonProperties reset get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_qGRQJPTub2QqdxjLzGNf5tknH8Bkf699UBX6aPCzYPkM', { api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only', capture_pageview: false });
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral: #E8593C; --coral-dark: #c94a2f; --coral-light: #fdeae5;
+      --text: #1a1a1a; --muted: #6b7280; --border: #e5e7eb;
+      --bg: #fff; --section-bg: #fafafa;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 1.5rem; }
+    .nav-inner { max-width: 960px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 1.05rem; font-weight: 700; color: var(--coral); text-decoration: none; }
+    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-lang { font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.3rem 0.5rem; border-radius: 6px; transition: color 0.15s; }
+    .nav-lang:hover { color: var(--coral); }
+    .nav-cta { background: var(--coral); color: #fff; text-decoration: none; padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--coral-dark); }
+
+    .breadcrumb { max-width: 960px; margin: 0 auto; padding: 0.75rem 1.5rem; font-size: 0.82rem; color: var(--muted); }
+    .breadcrumb a { color: var(--coral); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 0.4rem; }
+
+    .hero { padding: 3.5rem 1.5rem 3rem; background: linear-gradient(160deg, #fff 50%, var(--coral-light) 100%); }
+    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+    @media (min-width: 780px) { .hero-inner { flex-direction: row; align-items: center; gap: 4rem; } }
+    .hero-text { flex: 1; text-align: center; }
+    @media (min-width: 780px) { .hero-text { text-align: left; } }
+    .hero-badge { display: inline-block; background: var(--coral-light); color: var(--coral); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(1.75rem, 4.5vw, 2.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--coral); font-style: normal; }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--muted); max-width: 480px; margin: 0 auto 2rem; }
+    @media (min-width: 780px) { .hero-sub { margin: 0 0 2rem; } }
+    .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    @media (min-width: 780px) { .hero-actions { align-items: flex-start; } }
+    .btn-primary { display: inline-block; background: var(--coral); color: #fff; text-decoration: none; padding: 0.9rem 2.2rem; border-radius: 14px; font-size: 1rem; font-weight: 700; transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 14px rgba(232,89,60,0.35); }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .hero-trust { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
+    .hero-phone { flex-shrink: 0; width: 200px; }
+    @media (min-width: 780px) { .hero-phone { width: 240px; } }
+    .iphone-frame { position: relative; border-radius: 36px; border: 3px solid #1a1a1a; box-shadow: inset 0 0 0 2px #2a2a2a, 0 24px 48px rgba(0,0,0,0.18), 0 8px 20px rgba(232,89,60,0.1); background: #000; overflow: hidden; }
+    .iphone-notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 68px; height: 18px; background: #000; border-radius: 10px; z-index: 10; }
+    .iphone-frame img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 33px; }
+
+    section { padding: 4rem 1.5rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.6rem; }
+    h2.section-title { font-size: clamp(1.55rem, 4vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.8rem; }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin-bottom: 2.5rem; line-height: 1.65; }
+
+    .pain-section { background: var(--section-bg); }
+    .pain-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+    @media (min-width: 640px) { .pain-grid { grid-template-columns: 1fr 1fr; } }
+    .pain-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; }
+    .pain-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+    .pain-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pain-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    .features-section { background: #fff; }
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 640px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .feature-card { background: var(--section-bg); border: 1px solid var(--border); border-radius: 20px; padding: 1.8rem 1.6rem; }
+    .feature-icon { width: 52px; height: 52px; background: var(--coral-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    .comparison-section { background: var(--section-bg); }
+    .table-wrap { overflow-x: auto; margin-top: 2rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    thead th { padding: 1rem 1.1rem; text-align: center; font-weight: 700; background: #1a1a1a; color: #fff; }
+    thead th.col-remember { background: var(--coral); }
+    thead th.col-feature { text-align: left; }
+    tbody td { padding: 0.85rem 1.1rem; text-align: center; border-bottom: 1px solid #f0f0f0; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) { background: #fff; }
+    tbody td:first-child { text-align: left; font-weight: 500; color: #444; }
+    tbody td.col-remember { background: #fff8f6; font-weight: 600; color: var(--coral); }
+    .yes { color: #22c55e; font-size: 1.1rem; }
+    .no  { color: #ef4444; font-size: 1.1rem; }
+    .table-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; }
+
+    .screenshots-section { background: #fff; overflow: hidden; padding: 4rem 0; }
+    .screenshots-section .section-inner { padding: 0 1.5rem; }
+    .screenshots-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 1.5rem 1.5rem 2rem; }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshots-track { display: flex; gap: 1.5rem; width: max-content; }
+    @media (min-width: 900px) {
+      .screenshots-scroll { overflow-x: visible; }
+      .screenshots-track { display: grid; grid-template-columns: repeat(4, 1fr); width: auto; max-width: 960px; margin: 0 auto; justify-items: center; }
+      .screenshot-item { width: 100%; display: flex; flex-direction: column; align-items: center; }
+    }
+    .screenshot-item { scroll-snap-align: start; flex-shrink: 0; width: 200px; display: flex; flex-direction: column; align-items: center; }
+    .screenshot-caption { margin-top: 0.75rem; font-size: 0.82rem; color: var(--muted); text-align: center; line-height: 1.4; }
+    .iphone-frame-sm { position: relative; border-radius: 30px; border: 3px solid #1a1a1a; box-shadow: inset 0 0 0 2px #2a2a2a, 0 16px 36px rgba(0,0,0,0.15); background: #000; overflow: hidden; transition: transform 0.3s; }
+    .iphone-frame-sm:hover { transform: translateY(-5px); }
+    .iphone-frame-sm img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 27px; }
+    .iphone-notch-sm { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 60px; height: 16px; background: #000; border-radius: 8px; z-index: 10; }
+
+    .story-section { background: var(--section-bg); }
+    .story-inner { max-width: 720px; margin: 0 auto; }
+    .story-inner p { font-size: 1rem; color: #374151; line-height: 1.8; margin-bottom: 1.2rem; }
+    .story-inner p:last-child { margin-bottom: 0; }
+    .story-sig { margin-top: 1.5rem; }
+    .story-sig-name { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+    .story-sig-text { font-size: 0.9rem; color: var(--muted); margin-top: 0.1rem; }
+
+    .faq-section { background: #fff; }
+    .faq-grid { max-width: 760px; margin: 0 auto; }
+    .faq-section details { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-section summary { font-size: 1rem; font-weight: 600; padding: 1.1rem 1.4rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; gap: 1rem; }
+    .faq-section summary::-webkit-details-marker { display: none; }
+    .faq-section summary::after { content: "+"; font-size: 1.3rem; color: var(--coral); font-weight: 300; flex-shrink: 0; }
+    .faq-section details[open] summary::after { content: "−"; }
+    .faq-section details p { padding: 0 1.4rem 1.2rem; font-size: 0.95rem; color: var(--muted); line-height: 1.7; background: #fff; }
+
+    .hubs-section { background: var(--section-bg); }
+    .hubs-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2rem; }
+    @media (min-width: 640px) { .hubs-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .hub-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-decoration: none; color: var(--text); display: block; transition: box-shadow 0.2s, transform 0.2s; }
+    .hub-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .hub-card-icon { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
+    .hub-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--coral); }
+    .hub-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
+
+    .cta-section { background: linear-gradient(135deg, #E8593C 0%, #c44a2e 100%); color: #fff; text-align: center; padding: 5rem 1.5rem; }
+    .cta-section h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.1rem; opacity: 0.9; max-width: 480px; margin: 0 auto 2rem; line-height: 1.65; }
+    .btn-white { display: inline-block; background: #fff; color: var(--coral); text-decoration: none; padding: 1rem 2.4rem; border-radius: 14px; font-size: 1.05rem; font-weight: 700; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+    .cta-trust { margin-top: 1.2rem; font-size: 0.88rem; opacity: 0.8; }
+
+    footer { background: #1a1a1a; color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem; }
+    .footer-inner { max-width: 960px; margin: 0 auto; }
+    .footer-top { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem; }
+    @media (min-width: 640px) { .footer-top { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .footer-logo { color: #fff; font-weight: 700; font-size: 1rem; text-decoration: none; display: block; margin-bottom: 0.4rem; }
+    .footer-tagline { font-size: 0.82rem; }
+    .footer-nav-groups { display: flex; flex-wrap: wrap; gap: 2rem; }
+    .footer-nav-group h4 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 0.6rem; }
+    .footer-nav-group a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.4rem; transition: color 0.15s; }
+    .footer-nav-group a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; font-size: 0.8rem; text-align: center; }
+    @media (min-width: 640px) { .footer-bottom { text-align: left; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Remember</a>
+      <div class="nav-right">
+        <a href="/de/memory-keeping-app/" class="nav-lang">🇩🇪 DE</a>
+        <a href="/memory-keeping-app/" class="nav-lang" aria-current="page">🇬🇧 EN</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?pt=PROVIDER&ct=lp_memory_en" target="_blank" rel="noopener">Download Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="/">remember-journal.com</a>
+    <span>›</span>
+    Memory Keeping App
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Memory Keeping App</div>
+        <h1>A memory keeping app for <em>more than photos</em></h1>
+        <p class="hero-sub">Your memories are more than a camera roll — words, places, and the things you did, all in one place. As a journal, as a map, as a life you can look back at.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?pt=PROVIDER&ct=lp_memory_en" target="_blank" rel="noopener">Download on App Store</a>
+          <p class="hero-trust">Free up to 100 entries · Unlock unlimited for €4.99 once · iOS 17+</p>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <div class="iphone-frame">
+          <div class="iphone-notch"></div>
+          <img src="/images/screenshot-1.png" alt="Remember memory keeping app showing an interactive map with journal entries pinned across multiple locations" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain-section">
+    <div class="section-inner">
+      <div class="section-label">The problem with photos alone</div>
+      <h2 class="section-title">Memories are more than a camera roll</h2>
+      <p class="section-sub">Photos capture what you saw. They don't capture where exactly it was, who you were with, what made it matter. Three years later, the context is what you miss.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">📷</span>
+          <h3>Photos without context</h3>
+          <p>A camera roll shows images. It doesn't tell you the name of the restaurant, the trail that led to that view, or what the evening felt like. The memory is there somewhere — but it's not retrievable. A written note attached to a place is what makes it findable again.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">📝</span>
+          <h3>Notes scattered everywhere</h3>
+          <p>Journal entries in one app. Restaurant names in another. Trip notes in a third. None of it connected to where you were when it happened. Remember brings it together: what you wrote, where you were, and what you were doing — in one searchable, map-linked record.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🗺️</span>
+          <h3>No map for your life</h3>
+          <p>Scrolling through a photo library or a text list is one way to revisit your past. Seeing every entry from the last two years as pins on an interactive map is something else — spatially, you can see your own life as a geography. Remember is built around that view.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🔒</span>
+          <h3>Your memories are yours</h3>
+          <p>Social apps and cloud photo services store your data on their servers to serve their business model. Remember stores everything locally on your iPhone. No advertising, no tracking, no account required. Made in Munich, fully GDPR compliant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">What Remember does</div>
+      <h2 class="section-title">Journal, places, and activities — all in one</h2>
+      <p class="section-sub">Most apps do one thing. Remember is a memory keeping app that combines three: what you wrote, where you were, and what you did — in two views that work together.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Three things in one</h3>
+          <p>Log a journal entry with your thoughts. Add a restaurant you want to remember. Track a hike, a concert, a book, a weekend trip. Each entry type lives in the same app, searchable together, connected by date and location. No switching between apps to piece together what happened when.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Map view and timeline — both</h3>
+          <p>Every entry becomes a pin on an interactive Apple Maps view. Zoom out and see years of memories spatially — every city, every place that mattered, everywhere you've been. Switch to the journal timeline to browse chronologically. Both views always available; both update as you add entries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✈️</div>
+          <h3>Private, offline, once</h3>
+          <p>All data lives on your iPhone. No Remember server, no account required, no behavioural tracking. Works entirely offline — create entries, write notes, capture GPS coordinates without a signal. One-time €4.99 unlocks unlimited entries. No subscription, no annual renewal, no surprise charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comparison-section">
+    <div class="section-inner">
+      <div class="section-label">Honest comparison</div>
+      <h2 class="section-title">Photo and scrapbook apps vs Remember</h2>
+      <p class="section-sub">Photo memory apps and scrapbook tools serve a different purpose. Here's the factual difference.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-feature">What matters</th>
+              <th>Photo / scrapbook apps</th>
+              <th class="col-remember">📖 Remember</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Primary format</td><td>Photo collages / albums</td><td class="col-remember">Written entries + optional photo</td></tr>
+            <tr><td>Words and notes per memory</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>GPS location per entry</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Interactive map of all entries</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Journal + places + activities</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>100 activity categories</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Full-text search across entries</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Works offline / no signal</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Data stored locally (GDPR)</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>No account required</td><td><span class="no">✗</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>No subscription</td><td>varies</td><td class="col-remember"><span class="yes">✓</span></td></tr>
+            <tr><td>Photos per entry</td><td><span class="yes">✓</span></td><td class="col-remember"><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Data correct as of June 2026. Without guarantee.</p>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="screenshots-section">
+    <div class="section-inner">
+      <div class="section-label">See it in action</div>
+      <h2 class="section-title">Your memories — as a map and a journal</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">Screenshots from the current version of Remember on iPhone.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshots-track">
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-1.png" alt="Remember memory keeping app map view with entry pins across multiple locations" loading="lazy"></div>
+          <p class="screenshot-caption">Map view — every memory, pinned</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-2.png" alt="Remember app entry creation screen with location, category and note" loading="lazy"></div>
+          <p class="screenshot-caption">Create an entry in seconds</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-3.png" alt="Remember app journal timeline showing chronological entries" loading="lazy"></div>
+          <p class="screenshot-caption">Journal timeline view</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-4.png" alt="Remember app entry detail with photo, notes and location" loading="lazy"></div>
+          <p class="screenshot-caption">Entry detail — note, photo, place</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="section-inner">
+      <div class="section-label">Why I built this</div>
+      <h2 class="section-title">A memory keeping app built around the map I always wanted</h2>
+      <div class="story-inner">
+        <p>Hi, I'm Florian — an indie iOS developer from Murnau am Staffelsee, near Munich. For a few years I kept a journal, tracked places in a notes app, and occasionally logged activities elsewhere. The problem was that nothing talked to anything else. I'd remember visiting a city but lose the restaurant name. I'd have a journal entry from a trip but no record of where I actually went.</p>
+
+        <p>What I wanted was one place for all of it — and I wanted to be able to see it on a map. Not because maps are a feature, but because my memory actually works spatially. When I look at a pin on a map, the memory attached to it comes back more fully than when I read a list entry.</p>
+
+        <p>So I built Remember around that. The map view came first. Every journal entry, place, and activity gets a GPS location. You can zoom out and see years of your life as geography — every city, every trail, every place that mattered. Zoom in on anywhere and find every memory from there.</p>
+
+        <p>I also chose not to use a subscription. A memory keeping app is something personal — a record of your own life. It should be something you own, not rent. Remember costs €4.99 once. That's it.</p>
+
+        <div class="story-sig">
+          <div class="story-sig-name">Florian K.</div>
+          <div class="story-sig-text">Indie iOS Developer · Murnau/Munich, Germany 🇩🇪</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-inner">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+      <p class="section-sub">Common questions about what Remember does and how it works as a memory keeping app.</p>
+      <div class="faq-grid">
+
+        <details>
+          <summary>Is Remember a scrapbook or photo app?</summary>
+          <p>No. Remember is a memory keeping app built around written entries — journal notes, places visited, and activities logged — with an optional photo attached to each. It's not about creating photo collages or printed albums. The focus is on capturing what happened, where, and what it felt like, in a format you can search and revisit years later. Photos are supported, but they're context — not the product.</p>
+        </details>
+
+        <details>
+          <summary>What can I keep besides photos?</summary>
+          <p>Anything worth remembering: a journal entry about an evening out, the name and location of a restaurant you loved, a hike you want to be able to find again, a concert, a book you finished, a weekend trip, a conversation worth keeping. Each entry can have a written note, a GPS location, a category (from 100 options), a star rating, a date, and a photo. The combination is what makes each memory retrievable and meaningful later.</p>
+        </details>
+
+        <details>
+          <summary>Is there a subscription?</summary>
+          <p>No. Remember costs €4.99 once, paid through the App Store. The free version supports up to 100 entries — enough to try the full experience properly across weeks or months. One payment unlocks unlimited entries forever. No annual renewals, no price increases, no in-app advertising. If a major new version ever requires a new purchase, you'll know well in advance.</p>
+        </details>
+
+        <details>
+          <summary>Is my data private? Does it work offline?</summary>
+          <p>Yes to both. All data is stored locally on your iPhone — there is no Remember server, no advertising, no third-party data tracking, and no account required to use the app. You can create entries, write notes, add photos and record GPS coordinates entirely offline. Sync is via Apple iCloud if you choose to enable it. The app is built in Munich, Germany, and is fully GDPR compliant.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE THE THREE PILLARS -->
+  <section class="hubs-section">
+    <div class="section-inner">
+      <div class="section-label">Three ways to remember</div>
+      <h2 class="section-title">Journal, places, and activities</h2>
+      <p class="section-sub">Remember combines three types of memory keeping. Explore each one.</p>
+      <div class="hubs-grid">
+        <a class="hub-card" href="/journal/">
+          <span class="hub-card-icon">📝</span>
+          <h3>Journal</h3>
+          <p>Written entries, reflections, and moments you want to hold on to. The words behind the places.</p>
+        </a>
+        <a class="hub-card" href="/places/">
+          <span class="hub-card-icon">📍</span>
+          <h3>Places</h3>
+          <p>Every restaurant, trail, city and viewpoint — pinned on a map with a note attached. The geography of your life.</p>
+        </a>
+        <a class="hub-card" href="/activities/">
+          <span class="hub-card-icon">🏃</span>
+          <h3>Activities</h3>
+          <p>Concerts, hikes, trips, books — life beyond fitness. What you did, not just where you went.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Start keeping memories — free</h2>
+      <p>Download Remember and start building a record of your life — in words, on a map, in one place. No account, no subscription.</p>
+      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?pt=PROVIDER&ct=lp_memory_en" target="_blank" rel="noopener">Download on App Store — Free</a>
+      <p class="cta-trust">€4.99 once for unlimited entries. No subscription. iOS 17+.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="/">Remember – Life Journal</a>
+          <p class="footer-tagline">Journal, places, and activities — in one place.</p>
+        </div>
+        <nav class="footer-nav-groups" aria-label="Footer navigation">
+          <div class="footer-nav-group">
+            <h4>Topics</h4>
+            <a href="/journal/">Journal</a>
+            <a href="/places/">Places</a>
+            <a href="/activities/">Activities</a>
+            <a href="/science/">Science</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>App</h4>
+            <a href="https://apps.apple.com/app/id6762295068" target="_blank" rel="noopener">App Store</a>
+            <a href="/journal/day-one-alternative/">Day One Alternative</a>
+            <a href="/places/travel-journal-app/">Travel Journal App</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Project</h4>
+            <a href="/impressum.html">Impressum</a>
+            <a href="/datenschutz.html">Privacy</a>
+            <a href="mailto:support@remember-journal.com">Contact</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Language</h4>
+            <a href="/">🇬🇧 English</a>
+            <a href="/de/">🇩🇪 Deutsch</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 F. Klepper · Made in Munich 🇩🇪</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (!window.posthog) return;
+      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          posthog.capture('app_store_clicked', { source: 'lp_memory_en', page: window.location.pathname, language: 'en' });
+        });
+      });
+      const params = new URLSearchParams(window.location.search);
+      posthog.capture('page_view_detailed', {
+        language: 'en', page: window.location.pathname,
+        referrer: document.referrer || 'direct',
+        device: /Mobile|Android|iPhone/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+        utm_source: params.get('utm_source') || 'none',
+        utm_campaign: params.get('utm_campaign') || 'lp_memory_en'
+      });
+    });
+  </script>
+
+</body>
+</html>
