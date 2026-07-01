@@ -36,7 +36,7 @@
     "applicationCategory": "LifestyleApplication",
     "description": "Eine Tagebuch-App mit interaktiver Karte: Jeder Eintrag lebt dort, wo er passiert ist – mit 100 Kategorien, Filtern und Sternebewertungen. Einmalig 4,99 €, kein Abo.",
     "url": "https://remember-journal.com",
-    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de",
+    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=map_journal",
     "author": { "@type": "Person", "name": "Florian K.", "address": { "@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE" } },
     "offers": [
       { "@type": "Offer", "name": "Kostenlos (bis 100 Einträge)", "price": "0", "priceCurrency": "EUR" },
@@ -202,7 +202,7 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/de/">Remember</a>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Kostenlos laden</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=map_journal" target="_blank" rel="noopener">Kostenlos laden</a>
     </div>
   </nav>
 
@@ -219,7 +219,7 @@
         <h1>Eine Tagebuch-App <em>mit Karte</em></h1>
         <p class="hero-sub">Die meisten Tagebücher sind ein Zeitstrahl. Sie schreiben, der Eintrag landet oben in einer Liste, und langsam sinkt alles aus dem Blickfeld. Remember fügt eine Dimension hinzu, die andere nicht haben: Ort.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Remember kostenlos im App Store laden</a>
+          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=map_journal" target="_blank" rel="noopener">Remember kostenlos im App Store laden</a>
           <p class="hero-trust">Kostenlos bis 100 Einträge · Unbegrenzt für einmalig 4,99 € · iOS 17+</p>
         </div>
       </div>
@@ -356,7 +356,7 @@
     <div class="section-inner">
       <h2>Remember kostenlos im App Store testen</h2>
       <p>Aus Bayern, von einem unabhängigen Entwickler. Keine Werbung, kein Account, kein Abo.</p>
-      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Im App Store laden – Kostenlos</a>
+      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=map_journal" target="_blank" rel="noopener">Im App Store laden – Kostenlos</a>
       <p class="cta-trust">Kostenlos bis 100 Einträge · 4,99 € einmalig für unbegrenzt · iOS 17+</p>
     </div>
   </section>
@@ -383,7 +383,7 @@
       if (!window.posthog) return;
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
         link.addEventListener('click', () => {
-          posthog.capture('appstore_click', { source: 'lp_map_journal_de', page: window.location.pathname, language: 'de' });
+          posthog.capture('map_journal_cta_click', { source: 'lp_map_journal_de', page: window.location.pathname, language: 'de' });
         });
       });
       const params = new URLSearchParams(window.location.search);

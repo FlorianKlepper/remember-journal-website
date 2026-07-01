@@ -35,7 +35,7 @@
     "applicationCategory": "LifestyleApplication",
     "description": "A digital journal with no subscription: free up to 100 entries, one-time €4.99 for unlimited. Map, 100 categories, star ratings, GDPR compliant.",
     "url": "https://remember-journal.com",
-    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=lp_no_sub_en",
+    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=no_sub_journal",
     "author": { "@type": "Person", "name": "Florian K.", "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" } },
     "offers": [
       { "@type": "Offer", "name": "Free (up to 100 entries)", "price": "0", "priceCurrency": "EUR" },
@@ -223,7 +223,7 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/">Remember</a>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=lp_no_sub_en" target="_blank" rel="noopener">Download Free</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=no_sub_journal" target="_blank" rel="noopener">Download Free</a>
     </div>
   </nav>
 
@@ -240,7 +240,7 @@
         <h1>A digital journal with <em>no subscription</em></h1>
         <p class="hero-sub">Somewhere along the way, keeping a diary became a monthly bill. Most well-known journaling apps are subscriptions now — you're effectively renting access to your own memories. Remember doesn't work that way.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=lp_no_sub_en" target="_blank" rel="noopener">Try Remember Free on App Store</a>
+          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=no_sub_journal" target="_blank" rel="noopener">Try Remember Free on App Store</a>
           <p class="hero-trust">Free up to 100 entries · Unlock unlimited for €4.99 once · iOS 17+</p>
         </div>
       </div>
@@ -409,7 +409,7 @@
     <div class="section-inner">
       <h2>Try Remember free on the App Store</h2>
       <p>Made in Bavaria by an independent developer. No ads, no account, no subscription.</p>
-      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=lp_no_sub_en" target="_blank" rel="noopener">Download on App Store — Free</a>
+      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=no_sub_journal" target="_blank" rel="noopener">Download on App Store — Free</a>
       <p class="cta-trust">Free to 100 entries · €4.99 once for unlimited · iOS 17+</p>
     </div>
   </section>
@@ -436,7 +436,7 @@
       if (!window.posthog) return;
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
         link.addEventListener('click', () => {
-          posthog.capture('appstore_click', { source: 'lp_no_sub_en', page: window.location.pathname, language: 'en' });
+          posthog.capture('no_sub_journal_cta_click', { source: 'lp_no_sub_en', page: window.location.pathname, language: 'en' });
         });
       });
       const params = new URLSearchParams(window.location.search);

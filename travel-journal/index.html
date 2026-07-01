@@ -35,7 +35,7 @@
     "applicationCategory": "TravelApplication",
     "description": "A travel journal that maps every trip, meal and place you loved. 100 categories, star ratings, works offline, no subscription — all on your iPhone.",
     "url": "https://remember-journal.com",
-    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=lp_travel_en",
+    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=travel_journal",
     "author": { "@type": "Person", "name": "Florian K.", "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" } },
     "offers": [
       { "@type": "Offer", "name": "Free (up to 100 entries)", "price": "0", "priceCurrency": "EUR" },
@@ -209,7 +209,7 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/">Remember</a>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=lp_travel_en" target="_blank" rel="noopener">Download Free</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=travel_journal" target="_blank" rel="noopener">Download Free</a>
     </div>
   </nav>
 
@@ -226,7 +226,7 @@
         <h1>A travel journal that maps <em>where you've been</em></h1>
         <p class="hero-sub">Travel memories fade fast. The photos survive in your camera roll, but without the story — where that tiny restaurant was, the name of the viewpoint, why the day mattered. A travel journal fixes that.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=lp_travel_en" target="_blank" rel="noopener">Try Remember Free on App Store</a>
+          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=travel_journal" target="_blank" rel="noopener">Try Remember Free on App Store</a>
           <p class="hero-trust">Free up to 100 entries · Unlock unlimited for €4.99 once · iOS 17+</p>
         </div>
       </div>
@@ -365,7 +365,7 @@
     <div class="section-inner">
       <h2>Try Remember free on the App Store</h2>
       <p>Made in Bavaria by an independent developer. No ads, no account, no subscription.</p>
-      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=lp_travel_en" target="_blank" rel="noopener">Download on App Store — Free</a>
+      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=travel_journal" target="_blank" rel="noopener">Download on App Store — Free</a>
       <p class="cta-trust">Free to 100 entries · €4.99 once for unlimited · Works offline · iOS 17+</p>
     </div>
   </section>
@@ -392,7 +392,7 @@
       if (!window.posthog) return;
       document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
         link.addEventListener('click', () => {
-          posthog.capture('appstore_click', { source: 'lp_travel_en', page: window.location.pathname, language: 'en' });
+          posthog.capture('travel_journal_cta_click', { source: 'lp_travel_en', page: window.location.pathname, language: 'en' });
         });
       });
       const params = new URLSearchParams(window.location.search);
