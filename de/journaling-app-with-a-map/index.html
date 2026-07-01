@@ -1,0 +1,401 @@
+<!-- ENTWURF – bitte gegenlesen -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tagebuch-App mit Karte – Remember</title>
+  <meta name="description" content="Remember ist eine Tagebuch-App mit Karte: Jeder Eintrag lebt dort, wo er passiert ist – so können Sie Ihr Leben nach Ort erkunden statt in einer Liste zu scrollen.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="canonical" href="https://remember-journal.com/de/journaling-app-with-a-map/">
+  <link rel="alternate" hreflang="de" href="https://remember-journal.com/de/journaling-app-with-a-map/" />
+  <link rel="alternate" hreflang="en" href="https://remember-journal.com/journaling-app-with-a-map/" />
+  <link rel="alternate" hreflang="x-default" href="https://remember-journal.com/journaling-app-with-a-map/" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tagebuch-App mit Karte – Remember">
+  <meta property="og:description" content="Jeder Eintrag lebt dort, wo er passiert ist. Erkunden Sie Ihr Leben nach Ort statt nach Datum. Kostenlos starten, einmalig 4,99 €, iOS 17+.">
+  <meta property="og:url" content="https://remember-journal.com/de/journaling-app-with-a-map/">
+  <meta property="og:image" content="https://remember-journal.com/images/screenshot-1.png">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tagebuch-App mit Karte – Remember">
+  <meta name="twitter:description" content="Jeder Eintrag auf der Karte. Einmalig 4,99 €, kein Abo.">
+  <meta name="twitter:image" content="https://remember-journal.com/images/screenshot-1.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Remember – Life Journal",
+    "operatingSystem": "iOS 17+",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Eine Tagebuch-App mit interaktiver Karte: Jeder Eintrag lebt dort, wo er passiert ist – mit 100 Kategorien, Filtern und Sternebewertungen. Einmalig 4,99 €, kein Abo.",
+    "url": "https://remember-journal.com",
+    "downloadUrl": "https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de",
+    "author": { "@type": "Person", "name": "Florian K.", "address": { "@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE" } },
+    "offers": [
+      { "@type": "Offer", "name": "Kostenlos (bis 100 Einträge)", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Unbegrenzt (einmalig)", "price": "4.99", "priceCurrency": "EUR" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Gibt es eine Tagebuch-App mit Karte?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja — Remember. Jeder Eintrag kann auf einer interaktiven Karte verankert werden, sodass Sie Ihr Leben nach Ort statt nach Datum durchsuchen können." }
+      },
+      {
+        "@type": "Question",
+        "name": "Worin unterscheidet sich das von einem normalen Tagebuch?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ein normales Tagebuch ist eine chronologische Liste. Remember fügt den Ort hinzu: Sie können nach Kategorie filtern, die Karte öffnen und Einträge dort wiederfinden, wo sie stattgefunden haben." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist Remember kostenlos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kostenlos bis 100 Einträge. Ein einmaliger Kauf für 4,99 € schaltet unbegrenzte Einträge und alle 100 Kategorien frei – kein Abo." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sind meine Daten privat?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja. Die Einträge bleiben auf dem iPhone. Kein Account, keine Cloud-Synchronisation." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Remember Journal", "item": "https://remember-journal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Tagebuch-App mit Karte", "item": "https://remember-journal.com/de/journaling-app-with-a-map/" }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRG8Y8J81"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BPRG8Y8J81');
+  </script>
+
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_distinct_id getGroups group resetGroups setPersonProperties resetPersonProperties reset get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_qGRQJPTub2QqdxjLzGNf5tknH8Bkf699UBX6aPCzYPkM', { api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only', capture_pageview: false });
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --coral: #E8593C; --coral-dark: #c94a2f; --coral-light: #fdeae5; --text: #1a1a1a; --muted: #6b7280; --border: #e5e7eb; --bg: #fff; --section-bg: #fafafa; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 1.5rem; }
+    .nav-inner { max-width: 960px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 1.05rem; font-weight: 700; color: var(--coral); text-decoration: none; }
+    .nav-cta { background: var(--coral); color: #fff; text-decoration: none; padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; min-height: 44px; display: flex; align-items: center; }
+    .nav-cta:hover { background: var(--coral-dark); }
+    .breadcrumb { max-width: 960px; margin: 0 auto; padding: 0.75rem 1.5rem; font-size: 0.82rem; color: var(--muted); }
+    .breadcrumb a { color: var(--coral); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 0.4rem; }
+    .hero { padding: 3.5rem 1.5rem 3rem; background: linear-gradient(160deg, #fff 50%, var(--coral-light) 100%); }
+    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+    @media (min-width: 780px) { .hero-inner { flex-direction: row; gap: 4rem; } }
+    .hero-text { flex: 1; text-align: center; }
+    @media (min-width: 780px) { .hero-text { text-align: left; } }
+    .hero-badge { display: inline-block; background: var(--coral-light); color: var(--coral); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(1.75rem, 4.5vw, 2.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--coral); font-style: normal; }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--muted); max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+    @media (min-width: 780px) { .hero-sub { margin: 0 0 2rem; } }
+    .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    @media (min-width: 780px) { .hero-actions { align-items: flex-start; } }
+    .btn-primary { display: inline-block; background: var(--coral); color: #fff; text-decoration: none; padding: 0.9rem 2.2rem; border-radius: 14px; font-size: 1rem; font-weight: 700; transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 14px rgba(232,89,60,0.35); }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .hero-trust { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
+    .hero-phone { flex-shrink: 0; width: 200px; }
+    @media (min-width: 780px) { .hero-phone { width: 240px; } }
+    .iphone-frame { position: relative; border-radius: 36px; border: 3px solid #1a1a1a; box-shadow: inset 0 0 0 2px #2a2a2a, 0 24px 48px rgba(0,0,0,0.18), 0 8px 20px rgba(232,89,60,0.1); background: #000; overflow: hidden; }
+    .iphone-notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 68px; height: 18px; background: #000; border-radius: 10px; z-index: 10; }
+    .iphone-frame img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 33px; }
+    section { padding: 4rem 1.5rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.6rem; }
+    h2.section-title { font-size: clamp(1.55rem, 4vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.8rem; }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin-bottom: 2.5rem; line-height: 1.65; }
+    .pain-section { background: var(--section-bg); }
+    .pain-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+    @media (min-width: 640px) { .pain-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .pain-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; }
+    .pain-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+    .pain-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pain-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    .features-section { background: #fff; }
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 640px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .feature-card { background: var(--section-bg); border: 1px solid var(--border); border-radius: 20px; padding: 1.8rem 1.6rem; transition: box-shadow 0.2s, transform 0.2s; }
+    .feature-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .feature-icon { width: 52px; height: 52px; background: var(--coral-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    .screenshots-section { background: var(--section-bg); overflow: hidden; padding: 4rem 0; }
+    .screenshots-section .section-inner { padding: 0 1.5rem; }
+    .screenshots-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 1.5rem 1.5rem 2rem; }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshots-track { display: flex; gap: 1.5rem; width: max-content; }
+    @media (min-width: 900px) { .screenshots-scroll { overflow-x: visible; } .screenshots-track { display: grid; grid-template-columns: repeat(4, 1fr); width: auto; max-width: 960px; margin: 0 auto; justify-items: center; } .screenshot-item { width: 100%; display: flex; flex-direction: column; align-items: center; } }
+    .screenshot-item { scroll-snap-align: start; flex-shrink: 0; width: 200px; display: flex; flex-direction: column; align-items: center; }
+    .screenshot-caption { margin-top: 0.75rem; font-size: 0.82rem; color: var(--muted); text-align: center; line-height: 1.4; }
+    .iphone-frame-sm { position: relative; border-radius: 30px; border: 3px solid #1a1a1a; box-shadow: inset 0 0 0 2px #2a2a2a, 0 16px 36px rgba(0,0,0,0.15); background: #000; overflow: hidden; transition: transform 0.3s; }
+    .iphone-frame-sm:hover { transform: translateY(-5px); }
+    .iphone-frame-sm img { display: block; width: 100%; aspect-ratio: 9/19.5; object-fit: cover; border-radius: 27px; }
+    .iphone-notch-sm { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 60px; height: 16px; background: #000; border-radius: 8px; z-index: 10; }
+    .story-section { background: #fff; }
+    .story-inner { max-width: 720px; margin: 0 auto; }
+    .story-inner p { font-size: 1rem; color: #374151; line-height: 1.8; margin-bottom: 1.2rem; }
+    .story-inner p:last-child { margin-bottom: 0; }
+    .story-sig { margin-top: 1.5rem; }
+    .story-sig-text { font-size: 0.9rem; color: var(--muted); }
+    .story-sig-name { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+    .faq-section { background: var(--section-bg); }
+    .faq-grid { max-width: 760px; margin: 0 auto; }
+    .faq-section details { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-section summary { font-size: 1rem; font-weight: 600; padding: 1.1rem 1.4rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; gap: 1rem; }
+    .faq-section summary::-webkit-details-marker { display: none; }
+    .faq-section summary::after { content: "+"; font-size: 1.3rem; color: var(--coral); font-weight: 300; flex-shrink: 0; }
+    .faq-section details[open] summary::after { content: "−"; }
+    .faq-section details p { padding: 0 1.4rem 1.2rem; font-size: 0.95rem; color: var(--muted); line-height: 1.7; background: #fff; }
+    .cta-section { background: linear-gradient(135deg, #E8593C 0%, #c44a2e 100%); color: #fff; text-align: center; padding: 5rem 1.5rem; }
+    .cta-section h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.1rem; opacity: 0.9; max-width: 480px; margin: 0 auto 2rem; line-height: 1.65; }
+    .btn-white { display: inline-block; background: #fff; color: var(--coral); text-decoration: none; padding: 1rem 2.4rem; border-radius: 14px; font-size: 1.05rem; font-weight: 700; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+    .cta-trust { margin-top: 1.2rem; font-size: 0.88rem; opacity: 0.8; }
+    footer { background: #1a1a1a; color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem; }
+    .footer-inner { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; align-items: center; text-align: center; }
+    @media (min-width: 640px) { .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-logo { color: #fff; font-weight: 700; font-size: 1rem; text-decoration: none; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.82rem; }
+    :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/de/">Remember</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Kostenlos laden</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/de/">remember-journal.com</a>
+    <span>›</span>
+    Tagebuch-App mit Karte
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Karte · Tagebuch · Leben</div>
+        <h1>Eine Tagebuch-App <em>mit Karte</em></h1>
+        <p class="hero-sub">Die meisten Tagebücher sind ein Zeitstrahl. Sie schreiben, der Eintrag landet oben in einer Liste, und langsam sinkt alles aus dem Blickfeld. Remember fügt eine Dimension hinzu, die andere nicht haben: Ort.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Remember kostenlos im App Store laden</a>
+          <p class="hero-trust">Kostenlos bis 100 Einträge · Unbegrenzt für einmalig 4,99 € · iOS 17+</p>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <div class="iphone-frame">
+          <div class="iphone-notch"></div>
+          <img src="/images/screenshot-1.png" alt="Remember App mit interaktiver Karte und Tagebucheinträgen an verschiedenen Orten" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain-section">
+    <div class="section-inner">
+      <div class="section-label">Warum Ort alles verändert</div>
+      <h2 class="section-title">Sie lesen Ihr Leben nicht nur zurück.<br>Sie erkunden es.</h2>
+      <p class="section-sub">Jeder Eintrag kann auf einer Karte liegen – Zurückblicken ist dadurch ein völlig anderes Erlebnis.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">🗺️</span>
+          <h3>Erkunden statt scrollen</h3>
+          <p>Öffnen Sie die Karte, und da ist es: das Restaurant von dieser Reise, der Wanderweg, den Sie geliebt haben, die Konzerthalle. Tippen Sie auf einen Pin und die Erinnerung kommt zurück.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🏷️</span>
+          <h3>Orte, Aktivitäten und Schreiben – zusammen</h3>
+          <p>Was Sie geschrieben haben, wo Sie waren und was Sie getan haben. Titel und ein paar Zeilen, Kategorie wählen, auf der Karte ablegen. Nach einem Jahr ein persönlicher Atlas Ihres Lebens.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🧠</span>
+          <h3>Warum eine Karte das Journaling verändert</h3>
+          <p>Wir erinnern uns räumlich. Sie vergessen vielleicht das Datum eines schönen Abends – aber Sie erinnern sich an die Ecke, an der er stattfand. Eine Karte macht sich das zunutze.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">Was drin steckt</div>
+      <h2 class="section-title">Einfach, privat, kein Abo</h2>
+      <p class="section-sub">Kostenlos bis 100 Einträge, dann einmalig 4,99 € für alles – kein Abo. Kein Account, keine Cloud: Ihre Einträge bleiben auf dem iPhone.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Interaktive Karte</h3>
+          <p>Jeder Eintrag lebt dort, wo er passiert ist. Öffnen Sie die Karte und durchsuchen Sie Ihr Leben nach Ort – Restaurants, Wanderungen, Konzerte, Alltagsmomente, alle verankert.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏷️</div>
+          <h3>100 Kategorien</h3>
+          <p>Von Restaurants und Wanderungen bis zu Konzerten und Büchern. Kategorie wählen und Karte oder Liste filtern – so finden Sie genau das, was Sie suchen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Sternebewertungen</h3>
+          <p>Jeden Eintrag 1–5 Sterne bewerten. Ihre schönsten Momente steigen nach oben – das perfekte Abendessen oder die unvergessliche Aussicht finden Sie in zwei Taps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots-section">
+    <div class="section-inner">
+      <div class="section-label">In Aktion</div>
+      <h2 class="section-title">Ihr Tagebuch – auf der Karte</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">Screenshots der aktuellen Version von Remember auf dem iPhone.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshots-track">
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-1.png" alt="Kartenansicht mit Tagebuch-Pins" loading="lazy"></div>
+          <p class="screenshot-caption">Kartenansicht – nach Ort erkunden</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-2.png" alt="Zeitstrahl-Ansicht" loading="lazy"></div>
+          <p class="screenshot-caption">Zeitstrahl – Einträge durchblättern</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-3.png" alt="Eintrag anlegen" loading="lazy"></div>
+          <p class="screenshot-caption">Eintrag in Sekunden anlegen</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="iphone-frame-sm"><div class="iphone-notch-sm"></div><img src="/images/screenshot-4.png" alt="Eintragsdetail mit Foto" loading="lazy"></div>
+          <p class="screenshot-caption">Detailansicht mit Foto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <div class="section-inner">
+      <div class="section-label">Warum ich das gebaut habe</div>
+      <h2 class="section-title">Ein Tagebuch, durch das man wandern kann</h2>
+      <div class="story-inner">
+        <p>Ich bin Florian – ein unabhängiger iOS-Entwickler aus Murnau/München. Ich habe jahrelang Tagebuch geführt, aber etwas hat immer gefehlt. Die Einträge waren da, aber sie wiederzufinden – wirklich zurückzublicken – bedeutete, durch eine Liste zu scrollen und auf ein Datum zu hoffen. Die Erinnerung war real. Die App konnte sie mir nur nicht zeigen.</p>
+        <p>Remember entstand aus einer Idee: Was wäre, wenn jeder Eintrag dort leben könnte, wo er passiert ist? Nicht als Metadaten, die niemand anschaut, sondern als primärer Weg, durch die eigene Vergangenheit zu navigieren. Karte öffnen, das eigene Leben nach Ort sehen, Pin antippen – da ist es.</p>
+        <p>Es ist ein Ein-Personen-Projekt, gebaut für Menschen, die zurückblicken wollen, nicht nur schreiben. Fragen oder Gedanken gerne an <a href="mailto:support@remember-journal.com" style="color:var(--coral);text-decoration:none;">support@remember-journal.com</a>.</p>
+        <div class="story-sig">
+          <div class="story-sig-name">Florian K.</div>
+          <div class="story-sig-text">Indie iOS-Entwickler · Murnau/München 🇩🇪</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="section-inner">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Häufige Fragen</h2>
+      <p class="section-sub">Häufige Fragen zur Tagebuch-App mit Karte.</p>
+      <div class="faq-grid">
+        <details>
+          <summary>Gibt es eine Tagebuch-App mit Karte?</summary>
+          <p>Ja — Remember. Jeder Eintrag kann auf einer interaktiven Apple-Maps-Karte verankert werden, sodass Sie Ihr Leben nach Ort statt nach Datum durchsuchen können. Tippen Sie auf einen Pin, um alles zu sehen, was Sie an diesem Ort festgehalten haben.</p>
+        </details>
+        <details>
+          <summary>Worin unterscheidet sich das von einem normalen Tagebuch?</summary>
+          <p>Ein normales Tagebuch ist eine chronologische Liste. Remember fügt den Ort hinzu: Sie können nach Kategorie filtern, die Karte öffnen und Einträge dort wiederfinden, wo sie stattgefunden haben – eine völlig andere Art zurückzublicken.</p>
+        </details>
+        <details>
+          <summary>Ist Remember kostenlos?</summary>
+          <p>Kostenlos bis 100 Einträge – genug, um wirklich zu sehen, wie die Karte mit eigenen Erinnerungen funktioniert. Ein einmaliger Kauf für 4,99 € schaltet unbegrenzte Einträge und alle 100 Kategorien frei. Kein Abo, keine Verlängerung.</p>
+        </details>
+        <details>
+          <summary>Sind meine Daten privat?</summary>
+          <p>Ja. Einträge bleiben auf dem iPhone – kein Account, keine Cloud. Die App stammt aus Deutschland und ist vollständig DSGVO-konform. Nichts verlässt das Gerät.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Remember kostenlos im App Store testen</h2>
+      <p>Aus Bayern, von einem unabhängigen Entwickler. Keine Werbung, kein Account, kein Abo.</p>
+      <a class="btn-white" href="https://apps.apple.com/app/id6762295068?ct=lp_map_journal_de" target="_blank" rel="noopener">Im App Store laden – Kostenlos</a>
+      <p class="cta-trust">Kostenlos bis 100 Einträge · 4,99 € einmalig für unbegrenzt · iOS 17+</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-logo" href="/de/">Remember – Life Journal</a>
+      <div class="footer-links">
+        <a href="/de/">Startseite</a>
+        <a href="/de/journal/tagebuch-app-ohne-abo/">Day-One-Alternative</a>
+        <a href="/de/digital-journal-no-subscription/">Kein Abo</a>
+        <a href="/de/travel-journal/">Reisetagebuch</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/journaling-app-with-a-map/">English Version</a>
+        <a href="mailto:support@remember-journal.com">Support</a>
+      </div>
+      <div class="footer-copy">© 2026 F. Klepper · Made in Munich 🇩🇪</div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (!window.posthog) return;
+      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          posthog.capture('appstore_click', { source: 'lp_map_journal_de', page: window.location.pathname, language: 'de' });
+        });
+      });
+      const params = new URLSearchParams(window.location.search);
+      posthog.capture('page_view_detailed', {
+        language: 'de', page: window.location.pathname,
+        referrer: document.referrer || 'direct',
+        device: /Mobile|Android|iPhone/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+        utm_source: params.get('utm_source') || 'none',
+        utm_campaign: params.get('utm_campaign') || 'lp_map_journal_de'
+      });
+    });
+  </script>
+
+</body>
+</html>
