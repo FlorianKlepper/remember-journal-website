@@ -14,7 +14,8 @@
       "Bash(sed -i '' 's/Dr\\\\. Florian Klepper/F. Klepper/g' index.html impressum.html datenschutz.html)",
       "Bash(sed -i '' 's/Florian Klepper/F. Klepper/g' index.html impressum.html datenschutz.html)",
       "Bash(git pull *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash([ -f \"/Users/florianklepper/Documents/remember-website/$path/index.html\" ])"
     ]
   }
 }
